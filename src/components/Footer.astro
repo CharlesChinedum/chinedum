@@ -1,0 +1,32 @@
+---
+import { footerLinks } from "../data";
+import { Icon } from "astro-icon";
+
+const date = new Date();
+const year = date.getFullYear();
+---
+
+<footer class="w-full">
+  <div
+    class="flex justify-between w-full text-center border-t-[1px] border-gray-700 py-4 px-7 text-gray-500 text-sm"
+  >
+    <div>
+      <p>&copy; {year} Chinedum.</p>
+    </div>
+    <div class="flex gap-5">
+      {
+        footerLinks.map((item) => (
+          <a href={item.url}>
+            <Icon name={item.icon} size="sm" pack="mdi" class="w-5" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* [astro-icon="github"] {
+    color: red;
+  } */
+</style>
