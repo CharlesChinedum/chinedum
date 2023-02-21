@@ -1,4 +1,21 @@
-export const navLinks: string[] = ["Blog", "Projects", "About", "Contact"];
+export const navLinks = [
+  // {
+  //   title: "Blog",
+  //   id: "/blog",
+  // },
+  {
+    title: "Projects",
+    id: "projects",
+  },
+  {
+    title: "About",
+    id: "about",
+  },
+  {
+    title: "Contact",
+    id: "contact",
+  },
+];
 
 export const navIcons: string[] = ["github", "twitter", "linkedin", "gmail"];
 
@@ -76,42 +93,42 @@ export const projects = [
     img: "shoppy.png",
     url: "http://shoppy-dashboard-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/shoppy-dashboard",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
   },
   {
     name: "Hoobank",
     img: "hoobank.png",
     url: "https://modern-bank-webapp.netlify.app/",
     github: "https://github.com/CharlesChinedum/Modern-Bank-WebApp",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "Hoobank is a next generation payment method. This project is a landing page for Hoobank. It was crafted using React and TailwindCss.",
   },
   {
     name: "Fiber",
     img: "fiber.png",
     url: "https://my-fiber-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/Fiber",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
   },
   {
     name: "Jadoo",
     img: "jadoo.png",
     url: "https://jadoo-travel-agency-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/jadoo-travel-agency",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "Jadoo is a travel agency dedicated to providing smooth travel experiences.",
   },
   {
     name: "Enaira",
     img: "enaira.png",
     url: "https://enaira-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/e-naira",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "Enaira is a platform that provides smooth purchase of data and airtime.",
   },
   {
     name: "Astro Website",
     img: "astro.png",
     url: "https://astro-website-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/astro-website",
-    desc: "Reda allows you to import, organise, share and read your books, articles, and other digital documents anytime, anywhere.",
+    desc: "This is a project I built up to solidify my knowledge of Astro. (It has a mini blog integrated into it).",
   },
 ];
 

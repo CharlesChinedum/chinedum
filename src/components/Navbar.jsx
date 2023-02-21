@@ -17,6 +17,9 @@ const Navbar = () => {
 
       <div className="w-[30%]">
         <ul className="list-none sm:flex hidden justify-center gap-2 items-center flex-1">
+          <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mr-10">
+            <a href="/blog"> Blog</a>
+          </li>
           {navLinks.map((nav, index) => (
             <li
               key={index}
@@ -24,7 +27,7 @@ const Navbar = () => {
                 index === navLinks.length - 1 ? "mr-0" : "mr-10"
               }`}
             >
-              <a href={`#${nav.id}`}>{nav}</a>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -44,6 +47,9 @@ const Navbar = () => {
           } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1 ">
+            <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mb-4">
+              <a href="/blog"> Blog</a>
+            </li>
             {navLinks.map((nav, index) => (
               <li
                 key={index}
@@ -51,7 +57,7 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? "mb-0" : "mb-4"
                 } text-white`}
               >
-                <a href={`#${nav.id}`}>{nav}</a>
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
