@@ -1,6 +1,7 @@
 ---
 import { footerLinks } from "../data";
 import { Icon } from "astro-icon";
+import FooterIcon from "./FooterIcon.astro";
 
 const date = new Date();
 const year = date.getFullYear();
@@ -8,22 +9,21 @@ const year = date.getFullYear();
 
 <footer class="w-full">
   <div
-    class="flex justify-between w-full text-center border-t-[1px] border-gray-700 py-4 px-7 text-gray-500 text-sm"
+    class="flex flex-col md:flex-row justify-between w-full text-center border-t-[1px] border-gray-700 py-4 px-7 text-gray-500 text-sm"
   >
     <div>
       <p>&copy; {year} Chinedum.</p>
     </div>
-    <div class="flex gap-5">
+    <div class="flex justify-center gap-7 md:gap-7 my-3 md:my-0">
       {
         footerLinks.map((item) => (
-          <a href={item.url}>
-            <Icon name={item.icon} size="sm" pack="mdi" class="w-5" />
-          </a>
+          <FooterIcon url={item.url} icon={item.icon} />
         ))
       }
     </div>
   </div>
 </footer>
+<!-- <Icon name={item.icon} size="sm" pack="mdi" class="w-5" /> -->
 
 <style>
   /* [astro-icon="github"] {
