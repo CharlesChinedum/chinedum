@@ -28,7 +28,13 @@ import Card from "./Card.astro";
       <div class="w-full px-10 flex flex-wrap gap-7 justify-center">
         {
           projects.map((item) => (
-            <Card title={item.name} desc={item.desc} img={`../${item.img}`} />
+            <Card
+              title={item.name}
+              desc={item.desc}
+              img={`../projects/${item.img}`}
+              url={item.url}
+              src={item.github}
+            />
           ))
         }
       </div>
