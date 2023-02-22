@@ -1,8 +1,8 @@
 // import FaBars from "react-icons/fa";
 // import IoCloseSharp from "react-icons/io";
 
-import menu from "/public/images/menu.svg";
-import close from "/public/images/close.svg";
+import menu from "../images/menu.svg";
+import close from "../images/close.svg";
 
 import { useState } from "react";
 
@@ -13,7 +13,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar z-10 mb-5 sm:mb-0 px-5">
-      <p className="text-2xl text-gray-200 font-bold">Chinedum.</p>
+      <a href="/">
+        <p className="text-2xl text-gray-200 font-bold">Chinedum.</p>
+      </a>
 
       <div className="w-[30%]">
         <ul className="list-none sm:flex hidden justify-center gap-2 items-center flex-1">
