@@ -1,11 +1,12 @@
 ---
 // import mockup from "../public/images/hero-illustration.png";
+import avatar from '../images/avatar.png';
 ---
 
 <section class="w-full">
-  <div class="flex w-full h-[calc(100vh-56px)] px-5">
+  <div class="flex w-full h-[calc(100vh-56px)] px-10">
     <div class="w-full md:w-[50%] flex justify-center items-center">
-      <div class="leading-[1]">
+      <div class="w-full leading-[1]">
         <span class="text-gray-500 text-[2rem] md:text-[4rem] font-mono"
           >Hi, I'm</span
         >
@@ -24,8 +25,8 @@
       </div>
     </div>
 
-    <div class="w-[50%] flex items-center justify-center">
-      <!-- <img src={mockup} alt="mockup" class="w-[20em]" /> -->
+    <div class="w-[50%] flex items-center justify-end mr-[7rem]">
+      <img src={avatar} alt="mockup" class="w-[20em] rounded-full" />
     </div>
   </div>
 </section>
