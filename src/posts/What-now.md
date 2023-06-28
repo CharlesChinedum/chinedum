@@ -2,8 +2,8 @@
 title: What now?
 slug: what now
 date: 29 June 2023
-description: Excepteur et adipisicing voluptate commodo laborum proident ex amet nulla. Esse proident pariatur eu fugiat tempor proident veniam officia ipsum duis irure ex nisi ea.
-keywords: security, product, attack, cybersecurity
+description: Join me on a candid and introspective exploration as I share my personal experiences and growth as a Software Engineer. In this captivating blog post, I open up about the challenges I've faced, including imposter syndrome and inconsistency, and my quest to overcome them.
+keywords: Imposter syndrome, Software Engineer, Journey, Things I've learned, Inconsistency, Writing, Blogging, Project, Language, Framework, Useful, Enjoy, Thanks, See you soon
 draft: false
 ---
 
