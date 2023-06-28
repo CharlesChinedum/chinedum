@@ -1,7 +1,7 @@
 ---
 title: What now?
 slug: what now
-date: 1 May 2023
+date: 29 June 2023
 description: Excepteur et adipisicing voluptate commodo laborum proident ex amet nulla. Esse proident pariatur eu fugiat tempor proident veniam officia ipsum duis irure ex nisi ea.
 keywords: security, product, attack, cybersecurity
 draft: false
