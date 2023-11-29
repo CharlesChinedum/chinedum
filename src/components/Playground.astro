@@ -1,5 +1,5 @@
 ---
-import { projects } from "../data";
+import { playground } from "../data";
 import Card from "./Card.astro";
 ---
 
@@ -10,19 +10,18 @@ import Card from "./Card.astro";
     <div class="w-full flex justify-center">
       <div class="w-full md:w-3/4">
         <div>
-          <h2 class="text-gray-400 text-2xl text-center mb-5">Projects</h2>
+          <h2 class="text-gray-400 text-2xl text-center mb-5">Playground</h2>
           <p class="text-gray-400 leading-[30px] monserrat tracking-wider">
-            During my free time, I like to <span class="blue-text">build</span> things
-            that I find interesting and/or would use; sometimes to learn more about
-            something or just to fix a problem that's particularly frustrated me
-            enough at that point in time. Here are a couple of them, you can find
-            other random things I build on my <span class="blue-text"
-              >
-              <a href="https://github.com/CharlesChinedum">
-                Github
-              </a>
-                </span>
-             page.
+            Like I said I love to build things. I have <span class="blue-text">
+              built
+            </span>
+            a lot of things in my spare time. Some of them are simple, some of them
+            are complex. Some of them are finished, some of them are not. Some of
+            them are public, some of them are private. Some of them are for <span
+              class="blue-text">fun</span
+            >, some of them are for work. Some of them are for <span
+              class="blue-text">learning</span
+            >, some of them are found here.
           </p>
         </div>
       </div>
@@ -31,7 +30,7 @@ import Card from "./Card.astro";
     <div class="w-full flex justify-center py-7">
       <div class="w-full md:px-10 flex flex-wrap gap-7 justify-center">
         {
-          projects.map((item) => (
+          playground.map((item) => (
             <Card
               title={item.name}
               desc={item.desc}

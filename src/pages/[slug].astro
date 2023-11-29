@@ -1,6 +1,8 @@
 ---
 import Layout from "../Layouts/Layout.astro";
 
+import BlogNavbar from "../components/BlogNavbar.astro";
+
 export async function getStaticPaths() {
   const posts = await Astro.glob("../posts/*.md");
 
@@ -18,7 +20,9 @@ const { Content, frontmatter } = Astro.props.post;
 ---
 
 <Layout title={frontmatter.title}>
-  <section class="px-5 md:px-[17rem] md:h-[80vh]">
+  <section>
+  <BlogNavbar />
+  <div class="px-5 md:px-[17rem] md:h-[80vh]">
     <div class="container mb-10">
       <a href="/blog">
         <p class="blue-text">{"< Back"}</p>
@@ -35,7 +39,8 @@ const { Content, frontmatter } = Astro.props.post;
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </Layout>
 
 <style>

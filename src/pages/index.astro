@@ -2,15 +2,19 @@
 import "../styles/global.css";
 
 import Layout from "../Layouts/Layout.astro";
+import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Tools from "../components/Tools.astro";
 import Projects from "../components/Projects.astro";
+import Playground from "../components/Playground.astro";
 ---
 
 <Layout title="Chinedum">
+  <Navbar client:load />
   <Hero />
   <About />
   <Tools />
   <Projects />
+  <Playground />
 </Layout>

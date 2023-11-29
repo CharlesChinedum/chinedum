@@ -68,7 +68,11 @@ export const tools3 = [
   },
   {
     title: "Sanity",
-    icon: "favicon.svg",
+    icon: "sanity",
+  },
+  {
+    title: "Golang",
+    icon: "go",
   },
 ];
 
@@ -81,10 +85,10 @@ export const futureTools = [
     title: "Solidity",
     icon: "solidity",
   },
-  {
-    title: "Go",
-    icon: "go",
-  },
+  // {
+  //   title: "Go",
+  //   icon: "go",
+  // },
 ];
 
 export const projects = [
@@ -94,6 +98,13 @@ export const projects = [
     url: "http://shoppy-dashboard-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/shoppy-dashboard",
     desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
+  },
+  {
+    name: "Eje Farms",
+    img: "eje.png",
+    url: "https://ejefarms.io/",
+    github: undefined,
+    desc: "At Ejefarms, we take immense pride in being a versatile and innovative company with a diverse portfolio of principal business activities.",
   },
   {
     name: "Hoobank",
@@ -109,6 +120,10 @@ export const projects = [
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
   },
+];
+
+// Playground
+export const playground = [
   {
     name: "Jadoo",
     img: "jadoo.png",

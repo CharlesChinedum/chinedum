@@ -13,6 +13,15 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  background: gray;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #92b8f5;
+}
+
 body {
   background-color: #121212;
 }
