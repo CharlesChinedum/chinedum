@@ -161,7 +161,7 @@ export const footerLinks = [
   {
     title: "LinkedIn",
     icon: "linkedin",
-    url: "https://www.linkedin.com/in/charles-chinedum-40b1121a7",
+    url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7/",
   },
   {
     title: "Email",
