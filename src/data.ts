@@ -76,6 +76,17 @@ export const tools3 = [
   },
 ];
 
+export const tools4 = [
+  {
+    title: "Strapi",
+    icon: "strapi",
+  },
+  {
+    title: "Prisma",
+    icon: "prisma",
+  },
+];
+
 export const futureTools = [
   {
     title: "Rust",

@@ -1,5 +1,5 @@
 ---
-import { futureTools, tools, tools2, tools3 } from "../data";
+import { futureTools, tools, tools2, tools3, tools4 } from "../data";
 import Tool from "./Tool.astro";
 ---
 
@@ -33,6 +33,9 @@ import Tool from "./Tool.astro";
         </div>
         <div>
           {tools3.map((item) => <Tool title={item.title} icon={item.icon} />)}
+        </div>
+        <div>
+          {tools4.map((item) => <Tool title={item.title} icon={item.icon} />)}
         </div>
       </div>
     </div>
