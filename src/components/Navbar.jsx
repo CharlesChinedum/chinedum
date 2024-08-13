@@ -12,12 +12,12 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar z-10 mb-5 sm:mb-0 px-5">
+    <nav className="w-full flex py-6 justify-between items-center navbar z-10 mb-5 sm:mb-0 px-5 xl:px-10 2xl:px-20">
       <a href="/">
         <p className="text-2xl text-gray-200 font-bold">Chinedum.</p>
       </a>
 
-      <div className="w-[30%]">
+      <div className="">
         <ul className="list-none sm:flex hidden justify-center gap-2 items-center flex-1">
           <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mr-10">
             <a href="/blog"> Blog</a>
@@ -25,9 +25,8 @@ const Navbar = () => {
           {navLinks.map((nav, index) => (
             <li
               key={index}
-              className={`text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins ${
-                index === navLinks.length - 1 ? "mr-0" : "mr-10"
-              }`}
+              className={`text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins ${index === navLinks.length - 1 ? "mr-0" : "mr-10"
+                }`}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -35,6 +34,7 @@ const Navbar = () => {
         </ul>
       </div>
 
+      {/* mobile */}
       <div className="sm:hidden flex flex-1 justify-end items-center z-20">
         <img
           src={toggle ? close : menu}
@@ -44,9 +44,8 @@ const Navbar = () => {
         />
 
         <div
-          className={`${
-            toggle ? "flex flex-col " : "hidden"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
+          className={`${toggle ? "flex flex-col " : "hidden"
+            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1 ">
             <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mb-4">
@@ -55,9 +54,8 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={index}
-                className={`font-poppins font-normal cursor-pointer text-[16px] hover:font-[700] hover:text-[#1f75fe] z-10 ${
-                  index === navLinks.length - 1 ? "mb-0" : "mb-4"
-                } text-white`}
+                className={`font-poppins font-normal cursor-pointer text-[16px] hover:font-[700] hover:text-[#1f75fe] z-10 ${index === navLinks.length - 1 ? "mb-0" : "mb-4"
+                  } text-white`}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>

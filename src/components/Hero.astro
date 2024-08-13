@@ -1,11 +1,17 @@
 ---
-import avatar from "../images/avatar.png";
+// import avatar from "../images/avatar.png";
+import avatar from "../images/avatar.jpg";
 ---
 
-<section class="w-full">
-  <div class="flex flex-col md:flex-row w-full h-[calc(100vh-56px)] px-10">
-    <div class="w-full md:w-[50%] flex justify-center items-center">
-      <div class="w-full leading-[1]">
+<section class="max-w-[1480px]">
+  <!-- <div class="flex flex-col md:flex-row w-full h-[calc(100vh-56px)] px-10"> -->
+  <div
+    class="flex flex-col xl:flex-row w-full xl:h-[760px] px-10 md:py-5 xl:py-0"
+  >
+    <div
+      class="w-full xl:w-[50%] mb-5 xl:mb-0 flex justify-center items-center"
+    >
+      <div class="w-full leading-[1] text-center xl:text-start">
         <span class="text-gray-500 text-[2rem] md:text-[4rem] font-mono"
           >Hi, I'm</span
         >
@@ -14,7 +20,7 @@ import avatar from "../images/avatar.png";
           Chinedum
         </h2>
         <p
-          class="text-gray-400 text-sm leading-[20px] monserrat tracking-wider"
+          class="text-gray-400 text-sm leading-[20px] monserrat tracking-wider text-center xl:text-start"
         >
           Detail-oriented <span class="blue-text"> professional</span> with excellent
           communication, interpersonal, and creative thinking skills. Implementing
@@ -25,9 +31,14 @@ import avatar from "../images/avatar.png";
     </div>
 
     <div
-      class="w-full md:w-[50%] flex items-center justify-center md:justify-end md:mr-[7rem] mt-5 md:mt-0"
+      class="w-full xl:w-[50%] flex items-center justify-center md:justify-center mt-5 md:mt-0"
     >
-      <img src={avatar} alt="mockup" class="w-[20rem] rounded-full" />
+      <!-- md:mr-[7rem] -->
+      <img
+        src={avatar}
+        alt="mockup"
+        class="md:w-[30rem] md:h-[30rem] rounded-full"
+      />
     </div>
   </div>
 </section>
