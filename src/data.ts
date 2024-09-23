@@ -40,20 +40,20 @@ export const tools = [
 
 export const tools2 = [
   {
-    title: "Typescript",
-    icon: "typescript",
+    title: "Vue",
+    icon: "vuedotjs",
   },
   {
-    title: "TailwindCss",
-    icon: "tailwindcss",
+    title: "Nuxt",
+    icon: "nuxtdotjs",
   },
   {
-    title: "Bootstrap",
-    icon: "bootstrap",
+    title: "Strapi",
+    icon: "strapi",
   },
   {
-    title: "Git",
-    icon: "git",
+    title: "Prisma",
+    icon: "prisma",
   },
 ];
 
@@ -78,12 +78,46 @@ export const tools3 = [
 
 export const tools4 = [
   {
-    title: "Strapi",
-    icon: "strapi",
+    title: "Typescript",
+    icon: "typescript",
   },
   {
-    title: "Prisma",
-    icon: "prisma",
+    title: "TailwindCss",
+    icon: "tailwindcss",
+  },
+  {
+    title: "Bootstrap",
+    icon: "bootstrap",
+  },
+  {
+    title: "Git",
+    icon: "git",
+  },
+];
+
+export const tools5 = [
+  {
+    title: "Node",
+    icon: "nodedotjs",
+  },
+  {
+    title: "Express",
+    icon: "express",
+  },
+  {
+    title: "MongoDB",
+    icon: "mongodb",
+  },
+  {
+    title: "Postgres",
+    icon: "postgresql",
+  },
+];
+
+export const tools6 = [
+  {
+    title: "Cypress",
+    icon: "cypress",
   },
 ];
 
