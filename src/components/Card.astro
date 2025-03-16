@@ -10,8 +10,8 @@ export interface Props {
 const { title, desc, img, url, src } = Astro.props as Props;
 ---
 
-<div class="w-[17rem] my-3">
-  <div>
+<div class="w-[17rem] my-3 border h-[27rem]">
+  <div class="flex flex-col justify-between">
     <div class="w-full">
       <img
         src={img}

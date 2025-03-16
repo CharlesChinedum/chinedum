@@ -165,6 +165,13 @@ export const projects = [
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
   },
+  {
+    name: "Whipcare",
+    img: "whipcare.png",
+    url: "https://whipcare.app/",
+    github: undefined,
+    desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
+  },
 ];
 
 // Playground
