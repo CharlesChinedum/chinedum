@@ -14,14 +14,19 @@ export const navLinks = [
     url: "/blog",
   },
   {
+    title: "Tools",
+    id: "tools",
+    url: "/tools",
+  },
+  {
     title: "About",
     id: "about",
-    url: undefined,
+    url: "/#about",
   },
   {
     title: "Contact",
     id: "contact",
-    url: undefined,
+    url: "/#contact",
   },
 ];
 
