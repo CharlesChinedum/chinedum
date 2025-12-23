@@ -6,14 +6,27 @@ export const navLinks = [
   {
     title: "Projects",
     id: "projects",
+    url: "/projects",
+  },
+  {
+    title: "Blog",
+    id: "blog",
+    url: "/blog",
+  },
+  {
+    title: "Tools",
+    id: "tools",
+    url: "/tools",
   },
   {
     title: "About",
     id: "about",
+    url: "/#about",
   },
   {
     title: "Contact",
     id: "contact",
+    url: "/#contact",
   },
 ];
 
@@ -165,6 +178,20 @@ export const projects = [
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
   },
+  {
+    name: "Whipcare",
+    img: "whipcare.png",
+    url: "https://whipcare.app/",
+    github: undefined,
+    desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
+  },
+  {
+    name: "Escalade Apartment",
+    img: "escaladeapartment.png",
+    url: "https://escaladehomes.ng",
+    github: undefined,
+    desc: "Escalade Homes offers beautifully designed apartments that blend elegance, simplicity, and peace of mind.",
+  },
 ];
 
 // Playground
@@ -205,12 +232,45 @@ export const footerLinks = [
   },
   {
     title: "LinkedIn",
-    icon: "linkedin",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
     url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
   },
   {
     title: "Email",
     icon: "gmail",
     url: "mailto:charleschinedum2@gmail.com",
+  },
+  {
+    title: "Reddit",
+    icon: "reddit",
+    url: "",
+  },
+];
+
+export const socials = [
+  {
+    title: "Twitter | X",
+    icon: "x",
+    url: "https://twitter.com/trulynedum",
+  },
+  {
+    title: "Github",
+    icon: "github",
+    url: "https://github.com/CharlesChinedum",
+  },
+  {
+    title: "LinkedIn",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
+    url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
+  },
+  {
+    title: "Email",
+    icon: "gmail",
+    url: "mailto:charleschinedum2@gmail.com",
+  },
+  {
+    title: "Reddit",
+    icon: "reddit",
+    url: "",
   },
 ];

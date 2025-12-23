@@ -10,8 +10,8 @@ export interface Props {
 const { title, desc, img, url, src } = Astro.props as Props;
 ---
 
-<div class="w-[17rem] my-3">
-  <div>
+<div class="w-[17rem] my-3 h-[27rem]">
+  <div class="h-full flex flex-col justify-between">
     <div class="w-full">
       <img
         src={img}
@@ -19,21 +19,23 @@ const { title, desc, img, url, src } = Astro.props as Props;
         class="h-[13em] w-full object-cover hover:scale-105 transform transition duration-300 ease-in-out rounded-xl"
       />
     </div>
-    <h2 class="text-gray-200 text-2xl pt-3 font-[500]">{title}</h2>
-    <p class="text-gray-500 py-5">{desc}</p>
-    <div class="w-full flex justify-between">
-      {
-        src != undefined ? (
-          <a href={src} target="_blank">
-            <div class="bg-gray-800 px-3 rounded-md hover:cursor-pointer">
-              <p class="text-gray-400">src</p>
-            </div>
-          </a>
-        ) : null
-      }
-      <a href={url} target="_blank">
-        <p class="text-gray-200 hover:cursor-pointer">Visit website</p>
-      </a>
+    <div class="h-1/2 flex flex-col justify-between">
+      <h2 class="text-gray-200 text-2xl pt-3 font-[500]">{title}</h2>
+      <p class="text-gray-500 py-5">{desc}</p>
+      <div class="w-full flex justify-between">
+        {
+          src != undefined ? (
+            <a href={src} target="_blank">
+              <div class="bg-gray-800 px-3 rounded-md hover:cursor-pointer">
+                <p class="text-gray-400">src</p>
+              </div>
+            </a>
+          ) : null
+        }
+        <a href={url} target="_blank">
+          <p class="text-gray-200 hover:cursor-pointer">Visit website</p>
+        </a>
+      </div>
     </div>
   </div>
 </div>
