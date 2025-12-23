@@ -35,11 +35,15 @@ import SocialIcon from "./General/SocialIcon.astro";
             </h2>
             <p class="font-mono text-brand-100">Fullstack Software Engineer</p>
           </div>
-          <div class="flex gap-x-2">
+          <div class="flex gap-x-3">
             {
               socials.map((social, index) => (
                 <div>
-                  <SocialIcon url={social.url} icon={social.icon} />
+                  <SocialIcon
+                    url={social.url}
+                    icon={social.icon}
+                    title={social.title}
+                  />
                 </div>
               ))
             }

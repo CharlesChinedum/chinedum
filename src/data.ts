@@ -232,7 +232,7 @@ export const footerLinks = [
   },
   {
     title: "LinkedIn",
-    icon: "linkedin",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
     url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
   },
   {
@@ -260,7 +260,7 @@ export const socials = [
   },
   {
     title: "LinkedIn",
-    icon: "linkedin",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
     url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
   },
   {

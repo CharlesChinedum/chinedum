@@ -14,10 +14,10 @@ const year = date.getFullYear();
     <div>
       <p>&copy; {year} Chinedum.</p>
     </div>
-    <div class="flex justify-center gap-7 md:gap-7 my-3 md:my-0">
+    <div class="flex justify-center gap-7 md:gap-3 my-3 md:my-0">
       {
         footerLinks.map((item) => (
-          <FooterIcon url={item.url} icon={item.icon} />
+          <FooterIcon url={item.url} icon={item.icon} title={item.title} />
         ))
       }
     </div>
