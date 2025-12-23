@@ -1,44 +1,64 @@
 ---
 // import avatar from "../images/avatar.png";
 import avatar from "../images/avatar.jpg";
+import PageLayout from "./Layouts/PageLayout.astro";
+import { socials } from "../data";
+import SocialIcon from "./General/SocialIcon.astro";
 ---
 
-<section class="max-w-[1480px]">
-  <!-- <div class="flex flex-col md:flex-row w-full h-[calc(100vh-56px)] px-10"> -->
-  <div
-    class="flex flex-col xl:flex-row w-full xl:h-[760px] px-10 md:py-5 xl:py-0"
-  >
-    <div
-      class="w-full xl:w-[50%] mb-5 xl:mb-0 flex justify-center items-center"
-    >
-      <div class="w-full leading-[1] text-center xl:text-start">
-        <span class="text-gray-500 text-[2rem] md:text-[4rem] font-mono"
-          >Hi, I'm</span
+<PageLayout>
+  <section class="w-full my-20">
+    <!-- <div class="flex flex-col md:flex-row w-full h-[calc(100vh-56px)] px-10"> -->
+    <div class="flex flex-col xl:flex-row w-full xl:h-28 md:py-5 xl:py-0">
+      <div
+        class="flex items-start justify-center md:justify-start mt-5 md:mt-0"
+      >
+        <!-- md:mr-[7rem] -->
+        <div class="border-r border-gray-600 pr-10">
+          <div class="md:w-28 md:h-28">
+            <img
+              src={avatar}
+              alt="mockup"
+              class="md:w-full md:h-full rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mb-5 xl:mb-0 flex justify-center items-start">
+        <div
+          class="w-full h-full flex flex-col justify-between leading-[1] text-center xl:text-start pl-10"
         >
-        <!-- <span class="text-[7rem] text-gray-200">I'm</span> -->
-        <h2 class="text-[#1f75fe] text-[3.5rem] md:text-[8rem] font-mono">
-          Chinedum
-        </h2>
-        <p
+          <div class="space-y-2">
+            <h2 class="text-gray-300 text-[3.5rem] md:text-base font-mono">
+              Ugbor Charles Chinedum
+            </h2>
+            <p class="font-mono text-brand-100">Fullstack Software Engineer</p>
+          </div>
+          <div class="flex gap-x-2">
+            {
+              socials.map((social, index) => (
+                <div>
+                  <SocialIcon url={social.url} icon={social.icon} />
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- <span class="text-gray-500 text-[2rem] md:text-[4rem] font-mono"
+          >Hi, I'm</span
+        > -->
+          <!-- <span class="text-[7rem] text-gray-200">I'm</span> -->
+          <!-- <p
           class="text-gray-400 text-sm leading-[20px] monserrat tracking-wider text-center xl:text-start"
         >
           Detail-oriented <span class="blue-text"> professional</span> with excellent
           communication, interpersonal, and creative thinking skills. Implementing
           <span class="blue-text"> pixel- perfect</span> user interfaces for the
           browser environment using modern Javascript and Css frameworks/libraries.
-        </p>
+        </p> -->
+        </div>
       </div>
     </div>
-
-    <div
-      class="w-full xl:w-[50%] flex items-center justify-center md:justify-center mt-5 md:mt-0"
-    >
-      <!-- md:mr-[7rem] -->
-      <img
-        src={avatar}
-        alt="mockup"
-        class="md:w-[30rem] md:h-[30rem] rounded-full"
-      />
-    </div>
-  </div>
-</section>
+  </section>
+</PageLayout>

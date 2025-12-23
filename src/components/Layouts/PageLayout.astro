@@ -1,0 +1,12 @@
+---
+const { children } = Astro.props;
+---
+
+<section class="w-full flex justify-center">
+  <div class="w-[760px] max-w-[760px]">
+    <div class="w-full">
+      <!-- {children} -->
+      <slot />
+    </div>
+  </div>
+</section>

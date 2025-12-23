@@ -1,0 +1,12 @@
+---
+export interface Props {
+  url: string;
+  icon: string;
+}
+
+const { url, icon } = Astro.props as Props;
+---
+
+<a href={url} target="_blank">
+  <img src={`https://cdn.simpleicons.org/${icon}/white`} alt="" class="w-5" />
+</a>
