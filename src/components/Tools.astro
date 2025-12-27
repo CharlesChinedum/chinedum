@@ -24,7 +24,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
             class="text-gray-400 leading-[30px] monserrat tracking-wider text-center xl:text-start"
           >
             My primary stack includes Javascript & Typescript (Next + Astro +
-            React on the front-end). I have listed some of the <span
+            React + Vue on the front-end). I have listed some of the <span
               class="blue-text">languages/tools</span
             > I have used or still use below (not *really* including frameworks).
           </p>
@@ -36,14 +36,15 @@ import PageLayout from "./Layouts/PageLayout.astro";
           class="grid grid-cols-4 gap-5 md:gap-x-40 w-full md:w-3/4 justify-between md:justify-start"
         >
           <div class="">
-            {tools.map((item) => <Tool title={item.title} icon={item.icon} />)}
+            {tools3.map((item) => <Tool title={item.title} icon={item.icon} />)}
           </div>
           <div class="">
             {tools2.map((item) => <Tool title={item.title} icon={item.icon} />)}
           </div>
           <div class="">
-            {tools3.map((item) => <Tool title={item.title} icon={item.icon} />)}
+            {tools.map((item) => <Tool title={item.title} icon={item.icon} />)}
           </div>
+
           <div class="">
             {tools4.map((item) => <Tool title={item.title} icon={item.icon} />)}
           </div>
