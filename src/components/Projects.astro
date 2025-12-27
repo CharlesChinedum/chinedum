@@ -1,7 +1,10 @@
 ---
-import { projects } from "../data";
+import { projects, CLIENT_ROUTES } from "../data";
 import Card from "./Card.astro";
 import PageLayout from "./Layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+
+const projectsList = projects.slice(0, 4);
 ---
 
 <PageLayout>
@@ -32,7 +35,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
       <div class="w-full flex justify-center py-7">
         <div class="w-full flex flex-wrap gap-7 justify-start">
           {
-            projects.map((item) => (
+            projectsList.map((item) => (
               <Card
                 title={item.name}
                 desc={item.desc}
@@ -43,6 +46,16 @@ import PageLayout from "./Layouts/PageLayout.astro";
             ))
           }
         </div>
+      </div>
+
+      <div class="w-full text-end">
+        <a
+          class="flex items-center justify-end text-gray-400 gap-x-2"
+          href={CLIENT_ROUTES.projects}
+        >
+          <span class="font-mono text-sm"> View All Projects</span>
+          <Icon name="mdi:arrow-right-thin" size="24" class="animate-pulse" />
+        </a>
       </div>
     </div>
   </section>

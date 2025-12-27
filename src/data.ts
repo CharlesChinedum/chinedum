@@ -302,3 +302,9 @@ export const socials = [
     url: "",
   },
 ];
+
+export const CLIENT_ROUTES = {
+  home: "/",
+  projects: "/projects",
+  tools: "/tools",
+};
