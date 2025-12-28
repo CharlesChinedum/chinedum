@@ -21,7 +21,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
         <div class="py-10">
           <h2 class="text-gray-200 text-2xl pb-3 text-start">Tools</h2>
           <p
-            class="text-gray-400 leading-[30px] monserrat tracking-wider text-center xl:text-start"
+            class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
           >
             My primary stack includes Javascript & Typescript (Next + Astro +
             React + Vue on the front-end). I have listed some of the <span
@@ -33,7 +33,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
 
       <div class="w-full flex justify-start md:mb-5">
         <div
-          class="grid grid-cols-4 gap-5 md:gap-x-40 w-full md:w-3/4 justify-between md:justify-start"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-x-40 w-full md:w-3/4 justify-between md:justify-start"
         >
           <div class="">
             {tools3.map((item) => <Tool title={item.title} icon={item.icon} />)}

@@ -10,7 +10,7 @@ export interface Props {
 const { title, desc, img, url, src } = Astro.props as Props;
 ---
 
-<div class="w-[17rem] my-3 h-[25rem]">
+<div class="md:w-[17rem] my-3 h-[25rem]">
   <div
     class="h-full flex flex-col justify-between border border-gray-600 hover:border-brand-100 transition duration-300 ease-in-out rounded-xl p-5"
   >
@@ -23,11 +23,13 @@ const { title, desc, img, url, src } = Astro.props as Props;
         />
       </div>
       <div>
-        <h2 class="text-gray-200 text-lg pt-3 font-[500]">{title}</h2>
+        <h2 class="text-gray-200 text-xl lg:text-lg pt-3 font-[500]">
+          {title}
+        </h2>
       </div>
     </div>
     <div class="h-1/2 flex flex-col justify-between">
-      <p class="text-gray-500 py-5">{desc}</p>
+      <p class="text-gray-500 text-lg md:text-base py-5">{desc}</p>
       <div class="w-full flex justify-between">
         {
           src != undefined ? (
