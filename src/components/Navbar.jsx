@@ -49,16 +49,16 @@ const Navbar = () => {
               } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
           >
             <ul className="list-none flex flex-col justify-end items-center flex-1 ">
-              <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mb-4">
+              {/* <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mb-4">
                 <a href="/blog"> Blog</a>
-              </li>
+              </li> */}
               {navLinks.map((nav, index) => (
                 <li
                   key={index}
                   className={`font-mono font-normal cursor-pointer text-[16px] hover:font-[700] hover:text-[#1f75fe] z-10 ${index === navLinks.length - 1 ? "mb-0" : "mb-4"
                     } text-white`}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`${nav.url ? nav.url : `#${nav.id}`}`} onClick={() => setToggle(false)}>{nav.title}</a>
                 </li>
               ))}
             </ul>

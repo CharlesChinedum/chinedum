@@ -9,13 +9,13 @@ import SocialIcon from "./General/SocialIcon.astro";
 <PageLayout>
   <section class="w-full my-20">
     <!-- <div class="flex flex-col md:flex-row w-full h-[calc(100vh-56px)] px-10"> -->
-    <div class="flex flex-col xl:flex-row w-full xl:h-28 md:py-5 xl:py-0">
+    <div class="flex flex-row w-full h-28 xl:h-28 lg:py-5 xl:py-0">
       <div
-        class="flex items-start justify-center md:justify-start mt-5 md:mt-0"
+        class="flex items-start justify-center md:justify-start mt-0 md:mt-0"
       >
         <!-- md:mr-[7rem] -->
-        <div class="border-r border-gray-600 pr-10">
-          <div class="md:w-28 md:h-28">
+        <div class="border-r border-gray-600 pr-4 lg:pr-10">
+          <div class="w-28 md:w-28 h-28 md:h-28">
             <img
               src={avatar}
               alt="mockup"
@@ -25,15 +25,17 @@ import SocialIcon from "./General/SocialIcon.astro";
         </div>
       </div>
 
-      <div class="w-full mb-5 xl:mb-0 flex justify-center items-start">
+      <div class="w-full mb-0 xl:mb-0 flex justify-center items-start">
         <div
-          class="w-full h-full flex flex-col justify-between leading-[1] text-center xl:text-start pl-10"
+          class="w-full h-full flex flex-col justify-between leading-[1] text-center xl:text-start pl-4 lg:pl-10"
         >
           <div class="space-y-2">
-            <h2 class="text-gray-300 text-[3.5rem] md:text-base font-mono">
+            <h2 class="text-gray-300 text-start md:text-base font-mono">
               Ugbor Charles Chinedum
             </h2>
-            <p class="font-mono text-brand-100">Fullstack Software Engineer</p>
+            <p class="font-mono text-start text-brand-100 text-base">
+              Fullstack Software Engineer
+            </p>
           </div>
           <div class="flex gap-x-3">
             {
