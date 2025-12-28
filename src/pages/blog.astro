@@ -12,7 +12,9 @@ const posts = await Astro.glob("../posts/*.md");
   <PageLayout>
     <section>
       <BlogNavbar />
-      <div class="flex justify-center items-start my-10 lg:my-20 md:h-[55vh]">
+      <div
+        class="flex justify-center items-start my-10 lg:my-20 md:min-h-[55vh]"
+      >
         <div class="container text-gray-400 lg:px-5 pb-7">
           <div class="mb-7">
             <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">Blog</h2>
