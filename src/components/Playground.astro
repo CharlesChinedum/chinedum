@@ -1,48 +1,52 @@
 ---
 import { playground } from "../data";
 import Card from "./Card.astro";
+import PageLayout from "./Layouts/PageLayout.astro";
 ---
 
-<section id="projects">
-  <div class="w-full py-3 px-5 xl:px-[15em]">
-    <hr class="border-gray-600 my-10" />
+<PageLayout>
+  <section id="projects">
+    <div class="w-full py-3">
+      <hr class="border-gray-600 my-10" />
 
-    <div class="w-full flex justify-center">
-      <div class="w-full xl:w-3/4">
-        <div>
-          <h2 class="text-gray-400 text-2xl text-center mb-5">Playground</h2>
-          <p
-            class="text-gray-400 leading-[30px] monserrat tracking-wider text-center xl:text-start"
-          >
-            Like I said I love to build things. I have <span class="blue-text">
-              built
-            </span>
-            a lot of things in my spare time. Some of them are simple, some of them
-            are complex. Some of them are finished, some of them are not. Some of
-            them are public, some of them are private. Some of them are for <span
-              class="blue-text">fun</span
-            >, some of them are for work. Some of them are for <span
-              class="blue-text">learning</span
-            >, some of them are found here.
-          </p>
+      <div class="w-full flex justify-center">
+        <div class="w-full">
+          <div>
+            <h2 class="text-gray-400 text-2xl text-start mb-5">Playground</h2>
+            <p
+              class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
+            >
+              Like I said I love to build things. I have <span
+                class="blue-text"
+              >
+                built
+              </span>
+              a lot of things in my spare time. Some of them are simple, some of
+              them are complex. Some of them are finished, some of them are not.
+              Some of them are public, some of them are private. Some of them are
+              for <span class="blue-text">fun</span>, some of them are for work.
+              Some of them are for <span class="blue-text">learning</span>, some
+              of them are found here.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center py-7">
+        <div class="w-full flex flex-wrap gap-7 justify-start">
+          {
+            playground.map((item) => (
+              <Card
+                title={item.name}
+                desc={item.desc}
+                img={`../projects/${item.img}`}
+                url={item.url}
+                src={item.github}
+              />
+            ))
+          }
         </div>
       </div>
     </div>
-
-    <div class="w-full flex justify-center py-7">
-      <div class="w-full md:px-10 flex flex-wrap gap-7 justify-center">
-        {
-          playground.map((item) => (
-            <Card
-              title={item.name}
-              desc={item.desc}
-              img={`../projects/${item.img}`}
-              url={item.url}
-              src={item.github}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</PageLayout>

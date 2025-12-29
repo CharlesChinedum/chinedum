@@ -1,46 +1,62 @@
 ---
-import { projects } from "../data";
+import { projects, CLIENT_ROUTES } from "../data";
 import Card from "./Card.astro";
+import PageLayout from "./Layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+
+const projectsList = projects.slice(0, 4);
 ---
 
-<section id="projects">
-  <div class="w-full py-3 px-5 xl:px-[15em]">
-    <hr class="border-gray-600 my-10" />
+<PageLayout>
+  <section id="projects">
+    <div class="w-full py-3">
+      <hr class="border-gray-600 my-10" />
 
-    <div class="w-full flex justify-center">
-      <div class="w-full xl:w-3/4">
-        <div>
-          <h2 class="text-gray-400 text-2xl text-center mb-5">Projects</h2>
-          <p
-            class="text-gray-400 leading-[30px] monserrat tracking-wider text-center xl:text-start"
-          >
-            During my free time, I like to <span class="blue-text">build</span> things
-            that I find interesting and/or would use; sometimes to learn more about
-            something or just to fix a problem that's particularly frustrated me
-            enough at that point in time. Here are a couple of them, you can find
-            other random things I build on my <span class="blue-text">
-              <a href="https://github.com/CharlesChinedum"> Github</a>
-            </span>
-            page.
-          </p>
+      <div class="w-full flex justify-center">
+        <div class="w-full">
+          <div>
+            <h2 class="text-gray-400 text-2xl text-start mb-5">Projects</h2>
+            <p
+              class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
+            >
+              During my free time, I like to <span class="blue-text">build</span
+              > things that I find interesting and/or would use; sometimes to learn
+              more about something or just to fix a problem that's particularly frustrated
+              me enough at that point in time. Here are a couple of them, you can
+              find other random things I build on my <span class="blue-text">
+                <a href="https://github.com/CharlesChinedum"> Github</a>
+              </span>
+              page.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="w-full flex justify-center py-7">
-      <div class="w-full md:px-10 flex flex-wrap gap-7 justify-center">
-        {
-          projects.map((item) => (
-            <Card
-              title={item.name}
-              desc={item.desc}
-              img={`../projects/${item.img}`}
-              url={item.url}
-              src={item.github}
-            />
-          ))
-        }
+      <div class="w-full flex justify-center py-7">
+        <div class="w-full flex flex-wrap gap-7 justify-start">
+          {
+            projectsList.map((item) => (
+              <Card
+                title={item.name}
+                desc={item.desc}
+                img={`../projects/${item.img}`}
+                url={item.url}
+                src={item.github}
+              />
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="w-full text-end">
+        <a
+          class="flex items-center justify-end text-gray-400 gap-x-2"
+          href={CLIENT_ROUTES.projects}
+        >
+          <span class="font-mono text-sm"> View All Projects</span>
+          <Icon name="mdi:arrow-right-thin" size="24" class="animate-pulse" />
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</PageLayout>

@@ -6,20 +6,64 @@ export const navLinks = [
   {
     title: "Projects",
     id: "projects",
+    url: "/projects",
+  },
+  {
+    title: "Blog",
+    id: "blog",
+    url: "/blog",
+  },
+  {
+    title: "Tools",
+    id: "tools",
+    url: "/tools",
   },
   {
     title: "About",
     id: "about",
+    url: "/#about",
   },
   {
     title: "Contact",
     id: "contact",
+    url: "/#contact",
   },
 ];
 
 export const navIcons: string[] = ["github", "twitter", "linkedin", "gmail"];
 
 export const tools = [
+  {
+    title: "Javascript",
+    icon: "javascript",
+  },
+  {
+    title: "Typescript",
+    icon: "typescript",
+  },
+  {
+    title: "Golang",
+    icon: "go",
+  },
+  {
+    title: "Solidity",
+    icon: "solidity",
+  },
+  {
+    title: "Node",
+    icon: "nodedotjs",
+  },
+];
+
+export const tools2 = [
+  {
+    title: "Vue",
+    icon: "vuedotjs",
+  },
+  {
+    title: "Nuxt",
+    icon: "nuxt",
+  },
   {
     title: "React",
     icon: "react",
@@ -33,27 +77,8 @@ export const tools = [
     icon: "astro",
   },
   {
-    title: "Javascript",
-    icon: "javascript",
-  },
-];
-
-export const tools2 = [
-  {
-    title: "Vue",
-    icon: "vuedotjs",
-  },
-  {
-    title: "Nuxt",
-    icon: "nuxtdotjs",
-  },
-  {
-    title: "Strapi",
-    icon: "strapi",
-  },
-  {
-    title: "Prisma",
-    icon: "prisma",
+    title: "Express",
+    icon: "express",
   },
 ];
 
@@ -71,38 +96,20 @@ export const tools3 = [
     icon: "sanity",
   },
   {
-    title: "Golang",
-    icon: "go",
-  },
-];
-
-export const tools4 = [
-  {
-    title: "Typescript",
-    icon: "typescript",
+    title: "Strapi",
+    icon: "strapi",
   },
   {
-    title: "TailwindCss",
-    icon: "tailwindcss",
-  },
-  {
-    title: "Bootstrap",
-    icon: "bootstrap",
+    title: "Prisma",
+    icon: "prisma",
   },
   {
     title: "Git",
     icon: "git",
   },
-];
-
-export const tools5 = [
   {
-    title: "Node",
-    icon: "nodedotjs",
-  },
-  {
-    title: "Express",
-    icon: "express",
+    title: "Cypress",
+    icon: "cypress",
   },
   {
     title: "MongoDB",
@@ -112,13 +119,47 @@ export const tools5 = [
     title: "Postgres",
     icon: "postgresql",
   },
+  {
+    title: "Docker",
+    icon: "docker",
+  },
+];
+
+export const tools4 = [
+  {
+    title: "TailwindCss",
+    icon: "tailwindcss",
+  },
+  {
+    title: "Bootstrap",
+    icon: "bootstrap",
+  },
+];
+
+export const tools5 = [
+  // {
+  //   title: "Node",
+  //   icon: "nodedotjs",
+  // },
+  // {
+  //   title: "Express",
+  //   icon: "express",
+  // },
+  // {
+  //   title: "MongoDB",
+  //   icon: "mongodb",
+  // },
+  // {
+  //   title: "Postgres",
+  //   icon: "postgresql",
+  // },
 ];
 
 export const tools6 = [
-  {
-    title: "Cypress",
-    icon: "cypress",
-  },
+  // {
+  //   title: "Cypress",
+  //   icon: "cypress",
+  // },
 ];
 
 export const futureTools = [
@@ -126,10 +167,10 @@ export const futureTools = [
     title: "Rust",
     icon: "rust",
   },
-  {
-    title: "Solidity",
-    icon: "solidity",
-  },
+  // {
+  //   title: "Solidity",
+  //   icon: "solidity",
+  // },
   // {
   //   title: "Go",
   //   icon: "go",
@@ -143,6 +184,20 @@ export const projects = [
     url: "http://shoppy-dashboard-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/shoppy-dashboard",
     desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
+  },
+  {
+    name: "Escalade Apartment",
+    img: "escaladeapartment.png",
+    url: "https://escaladehomes.ng",
+    github: undefined,
+    desc: "Escalade Homes offers beautifully designed apartments that blend elegance, simplicity, and peace of mind.",
+  },
+  {
+    name: "Whipcare",
+    img: "whipcare.png",
+    url: "https://whipcare.app/",
+    github: undefined,
+    desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
   },
   {
     name: "Eje Farms",
@@ -164,13 +219,6 @@ export const projects = [
     url: "https://my-fiber-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
-  },
-  {
-    name: "Whipcare",
-    img: "whipcare.png",
-    url: "https://whipcare.app/",
-    github: undefined,
-    desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
   },
 ];
 
@@ -212,7 +260,7 @@ export const footerLinks = [
   },
   {
     title: "LinkedIn",
-    icon: "linkedin",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
     url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
   },
   {
@@ -220,4 +268,43 @@ export const footerLinks = [
     icon: "gmail",
     url: "mailto:charleschinedum2@gmail.com",
   },
+  {
+    title: "Reddit",
+    icon: "reddit",
+    url: "",
+  },
 ];
+
+export const socials = [
+  {
+    title: "Twitter | X",
+    icon: "x",
+    url: "https://twitter.com/trulynedum",
+  },
+  {
+    title: "Github",
+    icon: "github",
+    url: "https://github.com/CharlesChinedum",
+  },
+  {
+    title: "LinkedIn",
+    icon: "/svgs/linkedin-svgrepo-com.svg",
+    url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
+  },
+  {
+    title: "Email",
+    icon: "gmail",
+    url: "mailto:charleschinedum2@gmail.com",
+  },
+  {
+    title: "Reddit",
+    icon: "reddit",
+    url: "",
+  },
+];
+
+export const CLIENT_ROUTES = {
+  home: "/",
+  projects: "/projects",
+  tools: "/tools",
+};

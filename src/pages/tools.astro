@@ -1,0 +1,109 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import "../styles/blog.module.css";
+
+import BlogNavbar from "../components/BlogNavbar.astro";
+import PageLayout from "../components/Layouts/PageLayout.astro";
+import {
+  futureTools,
+  tools,
+  tools2,
+  tools3,
+  tools4,
+  tools5,
+  tools6,
+} from "../data";
+import Tool from "../components/Tool.astro";
+const posts = await Astro.glob("../posts/*.md");
+---
+
+<Layout title="Tools">
+  <PageLayout>
+    <section>
+      <BlogNavbar />
+      <div class="flex justify-center items-start my-20">
+        <div class="container text-gray-400 lg:px-5 pb-7">
+          <div class="mb-7">
+            <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">Tools</h2>
+            <p
+              class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
+            >
+              My primary stack includes Javascript & Typescript (Next + Astro +
+              React + Vue on the front-end). I have listed some of the <span
+                class="blue-text">languages/tools</span
+              > I have used or still use below (not *really* including frameworks).
+            </p>
+          </div>
+
+          <div class="w-full flex justify-start md:mb-5">
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-x-40 w-full md:w-3/4 justify-between md:justify-start"
+            >
+              <div class="">
+                {
+                  tools3.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+              <div class="">
+                {
+                  tools2.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+              <div class="">
+                {
+                  tools.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+
+              <div class="">
+                {
+                  tools4.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+              <div class="">
+                {
+                  tools5.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+              <div class="">
+                {
+                  tools6.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex justify-center">
+            <div
+              class="w-full md:w-3/4 border-[1px] border-gray-600 rounded-2xl my-5 md:my-0 p-5"
+            >
+              <p class="text-gray-400 mb-3">
+                {"->"} Other things I am currently learning, intend to take a deeper
+                dive into or get started with at some point in the future
+              </p>
+              <div class="flex gap-5">
+                {
+                  futureTools.map((item) => (
+                    <Tool title={item.title} icon={item.icon} />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </PageLayout>
+</Layout>

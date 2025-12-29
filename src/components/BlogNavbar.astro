@@ -1,5 +1,72 @@
-<nav class="w-full flex py-6 navbar z-10 mb-5 sm:mb-0 px-5">
+---
+import { navLinks, CLIENT_ROUTES } from "../data";
+import { Icon } from "astro-icon/components";
+---
+
+<nav
+  class="w-full flex items-center justify-between py-6 navbar z-10 mb-5 sm:mb-0 lg:px-5"
+>
+  <div
+    class="w-full hidden md:flex items-center justify-between py-6 navbar z-10 mb-5 sm:mb-0 lg:px-0"
+  >
     <a href="/">
-      <p class="text-2xl text-gray-200 font-bold">Chinedum.</p>
+      <p class="text-2xl text-gray-200 font-bold font-mono">Chinedum.</p>
     </a>
+    <div class="">
+      <ul
+        class="list-none sm:flex hidden justify-center gap-2 items-center flex-1"
+      >
+        {
+          /* <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mr-10">
+              <a href="/blog"> Blog</a>
+            </li> */
+        }
+        {
+          navLinks.map((nav, index) => (
+            <li
+              class={`text-gray-300 text-sm font-[600] font-mono hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-3"
+              }`}
+            >
+              <a href={`${nav.url ? nav.url : `#${nav.id}`}`}>{nav.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="md:hidden w-full">
+    <div class="w-full">
+      <ul
+        class="w-full list-none flex justify-between gap-2 items-center flex-1"
+      >
+        {
+          /* <li className="text-gray-300 text-[17px] font-[600] hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins mr-10">
+              <a href="/blog"> Blog</a>
+            </li> */
+        }
+        <div>
+          <a href={CLIENT_ROUTES.home}>
+            <Icon
+              name="mdi:home"
+              class="text-gray-300 hover:text-brand-100"
+              size="20"
+            />
+          </a>
+        </div>
+        {
+          navLinks.map((nav, index) => (
+            <li
+              class={`text-gray-300 text-sm font-[600] font-mono hover:font-[700] hover:text-brand-100 leading-[22px] hover:cursor-pointer z-10 poppins ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-2"
+              }`}
+            >
+              <a href={`${nav.url ? nav.url : `#${nav.id}`}`}>{nav.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </nav>

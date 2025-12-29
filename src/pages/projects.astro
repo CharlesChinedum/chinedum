@@ -1,0 +1,55 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import "../styles/blog.module.css";
+
+import BlogNavbar from "../components/BlogNavbar.astro";
+import PageLayout from "../components/Layouts/PageLayout.astro";
+import { projects } from "../data";
+import Card from "../components/Card.astro";
+const posts = await Astro.glob("../posts/*.md");
+---
+
+<Layout title="Projects">
+  <PageLayout>
+    <section>
+      <BlogNavbar />
+      <div class="flex justify-center items-start my-20">
+        <div class="container text-gray-400 lg:px-5 pb-7">
+          <div class="mb-7">
+            <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">
+              Projects
+            </h2>
+            <p
+              class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
+            >
+              During my free time, I like to <span class="blue-text">build</span
+              > things that I find interesting and/or would use; sometimes to learn
+              more about something or just to fix a problem that's particularly frustrated
+              me enough at that point in time. Here are a couple of them, you can
+              find other random things I build on my <span class="blue-text">
+                <a href="https://github.com/CharlesChinedum"> Github</a>
+              </span>
+              page.
+            </p>
+          </div>
+
+          <div class="w-full flex justify-center py-7">
+            <div class="w-full flex flex-wrap gap-7 justify-start">
+              {
+                projects.map((item) => (
+                  <Card
+                    title={item.name}
+                    desc={item.desc}
+                    img={`../projects/${item.img}`}
+                    url={item.url}
+                    src={item.github}
+                  />
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </PageLayout>
+</Layout>
