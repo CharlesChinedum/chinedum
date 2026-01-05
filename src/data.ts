@@ -253,20 +253,20 @@ export const footerLinks = [
   {
     title: "Reddit",
     icon: "reddit",
-    url: "",
+    url: "https://www.reddit.com/user/d_software_guy/",
   },
 ];
 
 export const socials = [
   {
-    title: "Twitter | X",
-    icon: "x",
-    url: "https://twitter.com/trulynedum",
-  },
-  {
     title: "Github",
     icon: "github",
     url: "https://github.com/CharlesChinedum",
+  },
+  {
+    title: "Twitter | X",
+    icon: "x",
+    url: "https://twitter.com/trulynedum",
   },
   {
     title: "LinkedIn",
@@ -281,7 +281,7 @@ export const socials = [
   {
     title: "Reddit",
     icon: "reddit",
-    url: "",
+    url: "https://www.reddit.com/user/d_software_guy/",
   },
 ];
 
