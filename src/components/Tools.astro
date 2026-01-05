@@ -1,13 +1,5 @@
 ---
-import {
-  futureTools,
-  tools,
-  tools2,
-  tools3,
-  tools4,
-  tools5,
-  tools6,
-} from "../data";
+import { futureTools, tools, tools2, tools3, tools4 } from "../data";
 import Tool from "./Tool.astro";
 import PageLayout from "./Layouts/PageLayout.astro";
 ---
@@ -47,12 +39,6 @@ import PageLayout from "./Layouts/PageLayout.astro";
 
           <div class="">
             {tools4.map((item) => <Tool title={item.title} icon={item.icon} />)}
-          </div>
-          <div class="">
-            {tools5.map((item) => <Tool title={item.title} icon={item.icon} />)}
-          </div>
-          <div class="">
-            {tools6.map((item) => <Tool title={item.title} icon={item.icon} />)}
           </div>
         </div>
       </div>
