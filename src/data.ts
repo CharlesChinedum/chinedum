@@ -136,6 +136,10 @@ export const tools4 = [
   },
 ];
 
+export const tools5 = [];
+
+export const tools6 = [];
+
 export const futureTools = [
   {
     title: "Rust",
