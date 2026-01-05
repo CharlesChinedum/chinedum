@@ -1,8 +1,4 @@
 export const navLinks = [
-  // {
-  //   title: "Blog",
-  //   id: "/blog",
-  // },
   {
     title: "Projects",
     id: "projects",
@@ -140,32 +136,6 @@ export const tools4 = [
   },
 ];
 
-export const tools5 = [
-  // {
-  //   title: "Node",
-  //   icon: "nodedotjs",
-  // },
-  // {
-  //   title: "Express",
-  //   icon: "express",
-  // },
-  // {
-  //   title: "MongoDB",
-  //   icon: "mongodb",
-  // },
-  // {
-  //   title: "Postgres",
-  //   icon: "postgresql",
-  // },
-];
-
-export const tools6 = [
-  // {
-  //   title: "Cypress",
-  //   icon: "cypress",
-  // },
-];
-
 export const futureTools = [
   {
     title: "Rust",
@@ -179,14 +149,14 @@ export const futureTools = [
     title: "Redis",
     icon: "redis",
   },
-  // {
-  //   title: "Solidity",
-  //   icon: "solidity",
-  // },
-  // {
-  //   title: "Go",
-  //   icon: "go",
-  // },
+  {
+    title: "Grafana",
+    icon: "grafana",
+  },
+  {
+    title: "Swift",
+    icon: "swift",
+  },
 ];
 
 export const projects = [
