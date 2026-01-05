@@ -93,7 +93,9 @@ const posts = await Astro.glob("../posts/*.md");
                 {"->"} Other things I am currently learning, intend to take a deeper
                 dive into or get started with at some point in the future
               </p>
-              <div class="flex gap-5">
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 lg:flex gap-2 md:gap-3 lg:gap-5"
+              >
                 {
                   futureTools.map((item) => (
                     <Tool title={item.title} icon={item.icon} />
