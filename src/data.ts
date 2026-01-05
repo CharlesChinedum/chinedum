@@ -80,6 +80,10 @@ export const tools2 = [
     title: "Express",
     icon: "express",
   },
+  {
+    title: "NestJs",
+    icon: "nestjs",
+  },
 ];
 
 export const tools3 = [
@@ -167,6 +171,14 @@ export const futureTools = [
     title: "Rust",
     icon: "rust",
   },
+  {
+    title: "Kubernetes",
+    icon: "kubernetes",
+  },
+  {
+    title: "Redis",
+    icon: "redis",
+  },
   // {
   //   title: "Solidity",
   //   icon: "solidity",
@@ -213,13 +225,6 @@ export const projects = [
     github: "https://github.com/CharlesChinedum/Modern-Bank-WebApp",
     desc: "Hoobank is a next generation payment method. This project is a landing page for Hoobank. It was crafted using React and TailwindCss.",
   },
-  {
-    name: "Fiber",
-    img: "fiber.png",
-    url: "https://my-fiber-project.netlify.app/",
-    github: "https://github.com/CharlesChinedum/Fiber",
-    desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
-  },
 ];
 
 // Playground
@@ -244,6 +249,13 @@ export const playground = [
     url: "https://astro-website-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/astro-website",
     desc: "This is a project I built up to solidify my knowledge of Astro. (It has a mini blog integrated into it).",
+  },
+  {
+    name: "Fiber",
+    img: "fiber.png",
+    url: "https://my-fiber-project.netlify.app/",
+    github: "https://github.com/CharlesChinedum/Fiber",
+    desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
   },
 ];
 
@@ -307,4 +319,5 @@ export const CLIENT_ROUTES = {
   home: "/",
   projects: "/projects",
   tools: "/tools",
+  blog: "/blog",
 };
