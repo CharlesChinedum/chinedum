@@ -1,6 +1,8 @@
 ---
 import { navLinks, CLIENT_ROUTES } from "../data";
 import { Icon } from "astro-icon/components";
+
+const pathname = Astro.url.pathname;
 ---
 
 <nav
@@ -28,7 +30,12 @@ import { Icon } from "astro-icon/components";
                 index === navLinks.length - 1 ? "mr-0" : "mr-3"
               }`}
             >
-              <a href={`${nav.url ? nav.url : `#${nav.id}`}`}>{nav.title}</a>
+              <a
+                class={pathname === nav.url && nav.url ? "text-brand-100" : ""}
+                href={`${nav.url ? nav.url : `#${nav.id}`}`}
+              >
+                {nav.title}
+              </a>
             </li>
           ))
         }
@@ -62,7 +69,12 @@ import { Icon } from "astro-icon/components";
                 index === navLinks.length - 1 ? "mr-0" : "mr-2"
               }`}
             >
-              <a href={`${nav.url ? nav.url : `#${nav.id}`}`}>{nav.title}</a>
+              <a
+                class={pathname === nav.url && nav.url ? "text-brand-100" : ""}
+                href={`${nav.url ? nav.url : `#${nav.id}`}`}
+              >
+                {nav.title}
+              </a>
             </li>
           ))
         }

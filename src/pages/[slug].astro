@@ -3,6 +3,7 @@ import Layout from "../Layouts/Layout.astro";
 
 import BlogNavbar from "../components/BlogNavbar.astro";
 import PageLayout from "../components/Layouts/PageLayout.astro";
+import { CLIENT_ROUTES } from "../data";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("../posts/*.md");
@@ -26,7 +27,7 @@ const { Content, frontmatter } = Astro.props.post;
       <BlogNavbar />
       <div class="lg:px-5 md:min-h-[70vh]">
         <div class="container my-10 lg:mt-20 lg:mb-10">
-          <a href="/blog">
+          <a href={CLIENT_ROUTES.blog}>
             <p class="blue-text">{"< Back"}</p>
           </a>
           <div>
