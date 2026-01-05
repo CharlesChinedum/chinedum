@@ -1,6 +1,5 @@
 ---
-import { footerLinks } from "../data";
-import { Icon } from "astro-icon";
+import { socials } from "../data";
 import FooterIcon from "./FooterIcon.astro";
 
 const date = new Date();
@@ -16,7 +15,7 @@ const year = date.getFullYear();
     </div>
     <div class="flex justify-center gap-7 md:gap-3 my-3 md:my-0">
       {
-        footerLinks.map((item) => (
+        socials.map((item) => (
           <FooterIcon url={item.url} icon={item.icon} title={item.title} />
         ))
       }

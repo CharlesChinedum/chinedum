@@ -1,8 +1,4 @@
 export const navLinks = [
-  // {
-  //   title: "Blog",
-  //   id: "/blog",
-  // },
   {
     title: "Projects",
     id: "projects",
@@ -140,31 +136,9 @@ export const tools4 = [
   },
 ];
 
-export const tools5 = [
-  // {
-  //   title: "Node",
-  //   icon: "nodedotjs",
-  // },
-  // {
-  //   title: "Express",
-  //   icon: "express",
-  // },
-  // {
-  //   title: "MongoDB",
-  //   icon: "mongodb",
-  // },
-  // {
-  //   title: "Postgres",
-  //   icon: "postgresql",
-  // },
-];
+export const tools5 = [];
 
-export const tools6 = [
-  // {
-  //   title: "Cypress",
-  //   icon: "cypress",
-  // },
-];
+export const tools6 = [];
 
 export const futureTools = [
   {
@@ -179,14 +153,14 @@ export const futureTools = [
     title: "Redis",
     icon: "redis",
   },
-  // {
-  //   title: "Solidity",
-  //   icon: "solidity",
-  // },
-  // {
-  //   title: "Go",
-  //   icon: "go",
-  // },
+  {
+    title: "Grafana",
+    icon: "grafana",
+  },
+  {
+    title: "Swift",
+    icon: "swift",
+  },
 ];
 
 export const projects = [
@@ -259,44 +233,16 @@ export const playground = [
   },
 ];
 
-export const footerLinks = [
-  {
-    title: "Github",
-    icon: "github",
-    url: "https://github.com/CharlesChinedum",
-  },
-  {
-    title: "Twitter | X",
-    icon: "x",
-    url: "https://twitter.com/trulynedum",
-  },
-  {
-    title: "LinkedIn",
-    icon: "/svgs/linkedin-svgrepo-com.svg",
-    url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
-  },
-  {
-    title: "Email",
-    icon: "gmail",
-    url: "mailto:charleschinedum2@gmail.com",
-  },
-  {
-    title: "Reddit",
-    icon: "reddit",
-    url: "",
-  },
-];
-
 export const socials = [
   {
-    title: "Twitter | X",
-    icon: "x",
-    url: "https://twitter.com/trulynedum",
-  },
-  {
     title: "Github",
     icon: "github",
     url: "https://github.com/CharlesChinedum",
+  },
+  {
+    title: "Twitter | X",
+    icon: "x",
+    url: "https://twitter.com/trulynedum",
   },
   {
     title: "LinkedIn",
@@ -311,7 +257,7 @@ export const socials = [
   {
     title: "Reddit",
     icon: "reddit",
-    url: "",
+    url: "https://www.reddit.com/user/d_software_guy/",
   },
 ];
 
