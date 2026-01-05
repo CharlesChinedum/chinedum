@@ -229,34 +229,6 @@ export const playground = [
   },
 ];
 
-export const footerLinks = [
-  {
-    title: "Github",
-    icon: "github",
-    url: "https://github.com/CharlesChinedum",
-  },
-  {
-    title: "Twitter | X",
-    icon: "x",
-    url: "https://twitter.com/trulynedum",
-  },
-  {
-    title: "LinkedIn",
-    icon: "/svgs/linkedin-svgrepo-com.svg",
-    url: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
-  },
-  {
-    title: "Email",
-    icon: "gmail",
-    url: "mailto:charleschinedum2@gmail.com",
-  },
-  {
-    title: "Reddit",
-    icon: "reddit",
-    url: "https://www.reddit.com/user/d_software_guy/",
-  },
-];
-
 export const socials = [
   {
     title: "Github",
