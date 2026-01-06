@@ -186,6 +186,13 @@ export const projects = [
     desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
   },
   {
+    name: "Genius",
+    img: "genius.png",
+    url: "https://genius-umber-seven.vercel.app/",
+    github: undefined,
+    desc: "Create content using AI 10x faster.",
+  },
+  {
     name: "Eje Farms",
     img: "eje.png",
     url: "https://ejefarms.io/",
@@ -216,6 +223,13 @@ export const playground = [
     url: "https://enaira-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/e-naira",
     desc: "Enaira is a platform that provides smooth purchase of data and airtime.",
+  },
+  {
+    name: "3D Portfolio",
+    img: "3d_portfolio.png",
+    url: "https://threed-portfolio-spcy.onrender.com/",
+    github: "https://github.com/CharlesChinedum/3d-portfolio",
+    desc: "Used this project to explore working with 3d objects on the web and threejs.",
   },
   {
     name: "Astro Website",
