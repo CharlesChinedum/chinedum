@@ -256,7 +256,6 @@ export const CLIENT_ROUTES = {
     github: "https://github.com/CharlesChinedum",
     twitter: "https://twitter.com/trulynedum",
     linkedin: "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
-    reddit: "https://www.reddit.com/user/d_software_guy/",
     email: "charleschinedum2@gmail.com",
   },
 };
@@ -281,10 +280,5 @@ export const socials = [
     title: "Email",
     icon: "gmail",
     url: `mailto:${CLIENT_ROUTES.socials.email}`,
-  },
-  {
-    title: "Reddit",
-    icon: "reddit",
-    url: CLIENT_ROUTES.socials.reddit,
   },
 ];
