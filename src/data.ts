@@ -42,6 +42,10 @@ export const tools = [
     icon: "go",
   },
   {
+    title: "Rust",
+    icon: "rust",
+  },
+  {
     title: "Solidity",
     icon: "solidity",
   },
@@ -79,6 +83,10 @@ export const tools2 = [
   {
     title: "NestJs",
     icon: "nestjs",
+  },
+  {
+    title: "Axum",
+    icon: "rust",
   },
 ];
 
@@ -142,10 +150,6 @@ export const tools6 = [];
 
 export const futureTools = [
   {
-    title: "Rust",
-    icon: "rust",
-  },
-  {
     title: "Kubernetes",
     icon: "kubernetes",
   },
@@ -170,6 +174,7 @@ export const projects = [
     url: "http://shoppy-dashboard-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/shoppy-dashboard",
     desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
+    techStack: ["React", "TailwindCss", "Syncfusion"],
   },
   {
     name: "Escalade Apartment",
@@ -177,6 +182,7 @@ export const projects = [
     url: "https://escaladehomes.ng",
     github: undefined,
     desc: "Escalade Homes offers beautifully designed apartments that blend elegance, simplicity, and peace of mind.",
+    techStack: ["NextJs", "TailwindCss", "Firebase", "Paystack"],
   },
   {
     name: "Whipcare",
@@ -184,13 +190,15 @@ export const projects = [
     url: "https://whipcare.app/",
     github: undefined,
     desc: "From mechanics to detailers, Get connected to top-rated professionals seamlessly.",
+    techStack: ["NextJs", "TailwindCss"],
   },
   {
     name: "Genius",
     img: "genius.png",
     url: "https://genius-umber-seven.vercel.app/",
     github: undefined,
-    desc: "Create content using AI 10x faster.",
+    desc: "Create content using AI 10x faster. Features include image, video, audio, code generation and AI chatbot.",
+    techStack: ["NextJs", "TailwindCss"],
   },
   {
     name: "Eje Farms",
@@ -198,6 +206,7 @@ export const projects = [
     url: "https://ejefarms.io/",
     github: undefined,
     desc: "At Ejefarms, we take immense pride in being a versatile and innovative company with a diverse portfolio of principal business activities.",
+    techStack: ["NextJs", "TailwindCss"],
   },
   {
     name: "Hoobank",
@@ -205,17 +214,27 @@ export const projects = [
     url: "https://modern-bank-webapp.netlify.app/",
     github: "https://github.com/CharlesChinedum/Modern-Bank-WebApp",
     desc: "Hoobank is a next generation payment method. This project is a landing page for Hoobank. It was crafted using React and TailwindCss.",
+    techStack: ["React", "TailwindCss"],
   },
 ];
 
 // Playground
 export const playground = [
   {
+    name: "Sol Wallet Tracker",
+    img: "solana-wallet-tracker.png",
+    url: "https://solana-wallet-tracker-lime.vercel.app",
+    github: "https://github.com/CharlesChinedum/solana-wallet-tracker",
+    desc: "Input a Solana wallet address to track its transactions. Built this project while learning Axum.",
+    techStack: ["Rust", "Axum", "Solana", "NextJs"],
+  },
+  {
     name: "Jadoo",
     img: "jadoo.png",
     url: "https://jadoo-travel-agency-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/jadoo-travel-agency",
     desc: "Jadoo is a travel agency dedicated to providing smooth travel experiences.",
+    techStack: ["React", "TailwindCss"],
   },
   {
     name: "Enaira",
@@ -223,6 +242,7 @@ export const playground = [
     url: "https://enaira-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/e-naira",
     desc: "Enaira is a platform that provides smooth purchase of data and airtime.",
+    techStack: ["React", "TailwindCss"],
   },
   {
     name: "3D Portfolio",
@@ -230,6 +250,7 @@ export const playground = [
     url: "https://threed-portfolio-spcy.onrender.com/",
     github: "https://github.com/CharlesChinedum/3d-portfolio",
     desc: "Used this project to explore working with 3d objects on the web and threejs.",
+    techStack: ["React", "TailwindCss", "ThreeJs", "EmailJs"],
   },
   {
     name: "Astro Website",
@@ -237,6 +258,7 @@ export const playground = [
     url: "https://astro-website-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/astro-website",
     desc: "This is a project I built up to solidify my knowledge of Astro. (It has a mini blog integrated into it).",
+    techStack: ["Astro"],
   },
   {
     name: "Fiber",
@@ -244,6 +266,7 @@ export const playground = [
     url: "https://my-fiber-project.netlify.app/",
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
+    techStack: ["HTML", "CSS"],
   },
 ];
 
