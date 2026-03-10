@@ -193,6 +193,14 @@ export const projects = [
     techStack: ["NextJs", "TailwindCss"],
   },
   {
+    name: "Goto",
+    img: "goto.png",
+    url: "https://goto.trulynedum.dev/",
+    github: "https://github.com/CharlesChinedum/Goto",
+    desc: "Goto is a tiny CLI tool that lets you bookmark directories with short names, then jump to them instantly from anywhere.",
+    techStack: ["Go", "Shell Wrapper", "NextJs", "TailwindCss"],
+  },
+  {
     name: "Genius",
     img: "genius.png",
     url: "https://genius-umber-seven.vercel.app/",
