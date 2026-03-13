@@ -169,14 +169,6 @@ export const futureTools = [
 
 export const projects = [
   {
-    name: "Shoppy Dashboard",
-    img: "shoppy.png",
-    url: "http://shoppy-dashboard-project.netlify.app/",
-    github: "https://github.com/CharlesChinedum/shoppy-dashboard",
-    desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
-    techStack: ["React", "TailwindCss", "Syncfusion"],
-  },
-  {
     name: "Escalade Apartment",
     img: "escaladeapartment.png",
     url: "https://escaladehomes.ng",
@@ -217,24 +209,24 @@ export const projects = [
     techStack: ["NextJs", "TailwindCss"],
   },
   {
-    name: "Hoobank",
-    img: "hoobank.png",
-    url: "https://modern-bank-webapp.netlify.app/",
-    github: "https://github.com/CharlesChinedum/Modern-Bank-WebApp",
-    desc: "Hoobank is a next generation payment method. This project is a landing page for Hoobank. It was crafted using React and TailwindCss.",
-    techStack: ["React", "TailwindCss"],
-  },
-];
-
-// Playground
-export const playground = [
-  {
     name: "Sol Wallet Tracker",
     img: "solana-wallet-tracker.png",
     url: "https://solana-wallet-tracker-lime.vercel.app",
     github: "https://github.com/CharlesChinedum/solana-wallet-tracker",
     desc: "Input a Solana wallet address to track its transactions. Built this project while learning Axum.",
     techStack: ["Rust", "Axum", "Solana", "NextJs"],
+  },
+];
+
+// Playground
+export const playground = [
+  {
+    name: "Shoppy Dashboard",
+    img: "shoppy.png",
+    url: "http://shoppy-dashboard-project.netlify.app/",
+    github: "https://github.com/CharlesChinedum/shoppy-dashboard",
+    desc: "Shoppy dashboard is a multi-fucntional dashboard built with React, syncfusion and Tailwindcss.",
+    techStack: ["React", "TailwindCss", "Syncfusion"],
   },
   {
     name: "Jadoo",
@@ -275,6 +267,14 @@ export const playground = [
     github: "https://github.com/CharlesChinedum/Fiber",
     desc: "Fiber is a portfolio builder. This project is a landing page for Fiber.",
     techStack: ["HTML", "CSS"],
+  },
+  {
+    name: "Hoobank",
+    img: "hoobank.png",
+    url: "https://modern-bank-webapp.netlify.app/",
+    github: "https://github.com/CharlesChinedum/Modern-Bank-WebApp",
+    desc: "Hoobank is a next generation payment method. This project is a landing page for Hoobank. It was crafted using React and TailwindCss.",
+    techStack: ["React", "TailwindCss"],
   },
 ];
 
