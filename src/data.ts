@@ -169,6 +169,22 @@ export const futureTools = [
 
 export const projects = [
   {
+    name: "Vorge",
+    img: "whipcare.png",
+    url: "https://www.vorge.io/",
+    github: undefined,
+    desc: "Vorge replaces the Word documents, copy-pasted spreadsheets and one-off PDFs your team uses today with a structured, multi-user platform — built for refineries, mines, ports, and other critical infrastructure operators.",
+    techStack: ["NextJs", "TailwindCss", "Framer Motion", "Gsap"],
+  },
+  {
+    name: "Keble",
+    img: "escaladeapartment.png",
+    url: "https://www.keble.co/",
+    github: undefined,
+    desc: "Keble is a real estate investment platform focused on making full home and land ownership accessible to Africans across the globe.",
+    techStack: ["NextJs", "TailwindCss", "Framer Motion"],
+  },
+  {
     name: "Escalade Apartment",
     img: "escaladeapartment.png",
     url: "https://escaladehomes.ng",
