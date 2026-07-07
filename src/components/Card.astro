@@ -3,13 +3,13 @@ import { Icon } from "astro-icon/components";
 export interface Props {
   title: string;
   desc: string;
-  img: string;
+  img?: string;
   url: string;
-  src: string;
+  src?: string;
   stack: string[];
 }
 
-const { title, desc, img, url, src, stack } = Astro.props as Props;
+const { title, desc, url, src, stack } = Astro.props as Props;
 ---
 
 <div class="w-full">

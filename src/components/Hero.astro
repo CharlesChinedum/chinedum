@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import avatar from "../images/avatar1.jpg";
 import PageLayout from "./Layouts/PageLayout.astro";
 import { socials } from "../data";
@@ -10,9 +11,10 @@ import SocialIcon from "./General/SocialIcon.astro";
     <div class="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
       <div class="shrink-0">
         <div class="w-28 h-28">
-          <img
+          <Image
             src={avatar}
             alt="Chinedum U."
+            width={224}
             class="w-full h-full rounded-lg object-cover"
           />
         </div>
