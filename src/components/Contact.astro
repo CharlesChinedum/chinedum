@@ -1,0 +1,51 @@
+---
+import PageLayout from "./Layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+import { CLIENT_ROUTES } from "../data";
+
+const CALENDLY_URL = "https://calendly.com/charleschinedum2/30min";
+---
+
+<PageLayout>
+  <section id="contact" class="w-full">
+    <hr class="border-gray-600 my-10" />
+    <div class="py-6">
+      <h2 class="text-gray-200 text-2xl mb-3">Let's work together</h2>
+      <p
+        class="text-gray-400 leading-[30px] monserrat tracking-wider max-w-xl mb-6"
+      >
+        I'm currently open to new opportunities — full-time roles, freelance, or
+        an interesting collaboration. Have something in mind? The fastest way to
+        reach me is email or a quick call.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href={`mailto:${CLIENT_ROUTES.socials.email}`}
+          class="inline-flex items-center gap-2 rounded-lg bg-brand-100 px-4 py-2 text-sm font-mono text-white transition hover:opacity-90"
+        >
+          <Icon name="mdi:email-outline" size="18" />
+          Email me
+        </a>
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-4 py-2 text-sm font-mono text-gray-300 transition hover:border-brand-100 hover:text-gray-100"
+        >
+          <Icon name="mdi:calendar-clock" size="18" />
+          Book a call
+        </a>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-4 py-2 text-sm font-mono text-gray-300 transition hover:border-brand-100 hover:text-gray-100"
+        >
+          <Icon name="mdi:file-document-outline" size="18" />
+          Résumé
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

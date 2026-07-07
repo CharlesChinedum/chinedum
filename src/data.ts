@@ -28,127 +28,71 @@ export const navLinks = [
 
 export const navIcons: string[] = ["github", "twitter", "linkedin", "gmail"];
 
-export const tools = [
+export interface Tool {
+  title: string;
+  icon: string;
+}
+
+export interface ToolCategory {
+  label: string;
+  items: Tool[];
+}
+
+export const toolCategories: ToolCategory[] = [
   {
-    title: "Javascript",
-    icon: "javascript",
+    label: "Languages",
+    items: [
+      { title: "JavaScript", icon: "javascript" },
+      { title: "TypeScript", icon: "typescript" },
+      { title: "Golang", icon: "go" },
+      { title: "Rust", icon: "rust" },
+      { title: "Solidity", icon: "solidity" },
+    ],
   },
   {
-    title: "Typescript",
-    icon: "typescript",
+    label: "Frontend",
+    items: [
+      { title: "React", icon: "react" },
+      { title: "Next", icon: "nextdotjs" },
+      { title: "Vue", icon: "vuedotjs" },
+      { title: "Nuxt", icon: "nuxt" },
+      { title: "Astro", icon: "astro" },
+      { title: "TailwindCss", icon: "tailwindcss" },
+      { title: "Bootstrap", icon: "bootstrap" },
+    ],
   },
   {
-    title: "Golang",
-    icon: "go",
+    label: "Backend",
+    items: [
+      { title: "Node", icon: "nodedotjs" },
+      { title: "Express", icon: "express" },
+      { title: "NestJs", icon: "nestjs" },
+      { title: "Axum", icon: "rust" },
+      { title: "Prisma", icon: "prisma" },
+    ],
   },
   {
-    title: "Rust",
-    icon: "rust",
+    label: "Databases & CMS",
+    items: [
+      { title: "PostgreSQL", icon: "postgresql" },
+      { title: "MongoDB", icon: "mongodb" },
+      { title: "Sanity", icon: "sanity" },
+      { title: "Strapi", icon: "strapi" },
+    ],
   },
   {
-    title: "Solidity",
-    icon: "solidity",
-  },
-  {
-    title: "Node",
-    icon: "nodedotjs",
+    label: "DevOps & Tooling",
+    items: [
+      { title: "Git", icon: "git" },
+      { title: "GitHub", icon: "github" },
+      { title: "Docker", icon: "docker" },
+      { title: "Linux", icon: "linux" },
+      { title: "Cypress", icon: "cypress" },
+    ],
   },
 ];
 
-export const tools2 = [
-  {
-    title: "Vue",
-    icon: "vuedotjs",
-  },
-  {
-    title: "Nuxt",
-    icon: "nuxt",
-  },
-  {
-    title: "React",
-    icon: "react",
-  },
-  {
-    title: "Next",
-    icon: "nextdotjs",
-  },
-  {
-    title: "Astro",
-    icon: "astro",
-  },
-  {
-    title: "Express",
-    icon: "express",
-  },
-  {
-    title: "NestJs",
-    icon: "nestjs",
-  },
-  {
-    title: "Axum",
-    icon: "rust",
-  },
-];
-
-export const tools3 = [
-  {
-    title: "Github",
-    icon: "github",
-  },
-  {
-    title: "Linux",
-    icon: "linux",
-  },
-  {
-    title: "Sanity",
-    icon: "sanity",
-  },
-  {
-    title: "Strapi",
-    icon: "strapi",
-  },
-  {
-    title: "Prisma",
-    icon: "prisma",
-  },
-  {
-    title: "Git",
-    icon: "git",
-  },
-  {
-    title: "Cypress",
-    icon: "cypress",
-  },
-  {
-    title: "MongoDB",
-    icon: "mongodb",
-  },
-  {
-    title: "Postgres",
-    icon: "postgresql",
-  },
-  {
-    title: "Docker",
-    icon: "docker",
-  },
-];
-
-export const tools4 = [
-  {
-    title: "TailwindCss",
-    icon: "tailwindcss",
-  },
-  {
-    title: "Bootstrap",
-    icon: "bootstrap",
-  },
-];
-
-export const tools5 = [];
-
-export const tools6 = [];
-
-export const futureTools = [
+export const futureTools: Tool[] = [
   {
     title: "Kubernetes",
     icon: "kubernetes",
@@ -170,7 +114,8 @@ export const futureTools = [
 export const projects = [
   {
     name: "Vorge",
-    img: "whipcare.png",
+    // TODO: add a real Vorge screenshot to public/projects/ (was incorrectly using whipcare.png)
+    img: undefined,
     url: "https://www.vorge.io/",
     github: undefined,
     desc: "Vorge replaces the Word documents, copy-pasted spreadsheets and one-off PDFs your team uses today with a structured, multi-user platform — built for refineries, mines, ports, and other critical infrastructure operators.",
@@ -178,7 +123,8 @@ export const projects = [
   },
   {
     name: "Keble",
-    img: "escaladeapartment.png",
+    // TODO: add a real Keble screenshot to public/projects/ (was incorrectly using escaladeapartment.png)
+    img: undefined,
     url: "https://www.keble.co/",
     github: undefined,
     desc: "Keble is a real estate investment platform focused on making full home and land ownership accessible to Africans across the globe.",

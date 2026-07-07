@@ -1,15 +1,17 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import "../styles/blog.module.css";
+import "../styles/global.css";
 
 import BlogNavbar from "../components/BlogNavbar.astro";
 import PageLayout from "../components/Layouts/PageLayout.astro";
 import { projects, CLIENT_ROUTES } from "../data";
 import Card from "../components/Card.astro";
-const posts = await Astro.glob("../posts/*.md");
 ---
 
-<Layout title="Projects">
+<Layout
+  title="Projects — Chinedum U."
+  description="A selection of projects Chinedum U. has built — spanning web apps, platforms, and developer tools using Next.js, Rust, Astro, and more."
+>
   <PageLayout>
     <section>
       <BlogNavbar />

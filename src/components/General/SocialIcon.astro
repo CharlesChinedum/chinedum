@@ -8,12 +8,12 @@ export interface Props {
 const { url, icon, title } = Astro.props as Props;
 ---
 
-<a href={url} target="_blank">
+<a href={url} target="_blank" rel="noopener noreferrer" aria-label={title}>
   <img
     src={title !== "LinkedIn"
       ? `https://cdn.simpleicons.org/${icon}/white`
       : icon}
-    alt=""
+    alt={title ?? ""}
     class="w-5"
   />
 </a>
