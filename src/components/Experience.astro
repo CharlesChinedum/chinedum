@@ -1,0 +1,93 @@
+---
+import PageLayout from "./Layouts/PageLayout.astro";
+import { Icon } from "astro-icon/components";
+import { experience } from "../data";
+---
+
+<PageLayout>
+  <section id="experience">
+    <div class="w-full py-3">
+      <hr class="border-gray-600 my-10" />
+
+      <div class="mb-8">
+        <h2 class="text-gray-400 text-2xl text-start mb-5">Experience</h2>
+        <p
+          class="text-gray-400 leading-[30px] monserrat tracking-wider lg:text-center xl:text-start"
+        >
+          Companies and teams I've <span class="blue-text">built with</span> —
+          shipping production software across real estate, fintech, and critical
+          infrastructure.
+        </p>
+      </div>
+
+      <ol class="relative border-l border-gray-700 ml-1">
+        {
+          experience.map((item) => (
+            <li class="ml-6 pb-8 last:pb-0">
+              <span class="absolute -left-[7px] mt-1.5 flex h-3 w-3">
+                {item.current && (
+                  <span class="absolute inline-flex h-full w-full rounded-full bg-brand-100 opacity-75 animate-ping" />
+                )}
+                <span
+                  class:list={[
+                    "relative inline-flex h-3 w-3 rounded-full",
+                    item.current ? "bg-brand-100" : "bg-gray-600",
+                  ]}
+                />
+              </span>
+
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+                <h3 class="text-gray-200 text-lg font-[500]">
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 hover:text-brand-100 transition"
+                    >
+                      {item.company}
+                      <Icon name="mdi:arrow-top-right" size="16" />
+                    </a>
+                  ) : (
+                    item.company
+                  )}
+                </h3>
+                {item.period && (
+                  <span class="text-gray-500 text-sm font-mono">
+                    {item.period}
+                  </span>
+                )}
+              </div>
+
+              <div class="flex flex-wrap items-baseline gap-x-2 mt-0.5">
+                {item.role && (
+                  <p class="text-brand-100 font-mono text-sm">{item.role}</p>
+                )}
+                {item.location && (
+                  <p class="text-gray-500 text-xs font-mono">
+                    · {item.location}
+                  </p>
+                )}
+              </div>
+
+              <p class="text-gray-400 text-sm md:text-base leading-6 mt-2">
+                {item.description}
+              </p>
+
+              {item.techStack && item.techStack.length > 0 && (
+                <div class="flex flex-wrap gap-x-3 gap-y-1 mt-3">
+                  {item.techStack.map((tech) => (
+                    <div class="flex items-center gap-x-1">
+                      <div class="w-2 h-2 bg-gray-700 rounded-full" />
+                      <p class="text-gray-500 text-xs font-medium">{tech}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+</PageLayout>

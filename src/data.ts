@@ -20,6 +20,11 @@ export const navLinks = [
     url: "/#about",
   },
   {
+    title: "Experience",
+    id: "experience",
+    url: "/#experience",
+  },
+  {
     title: "Contact",
     id: "contact",
     url: "/#contact",
@@ -111,6 +116,61 @@ export const futureTools: Tool[] = [
   },
 ];
 
+export interface Experience {
+  company: string;
+  role: string;
+  period: string; // e.g. "2022 — 2024" or "2024 — Present"
+  location?: string;
+  current?: boolean;
+  description: string;
+  url?: string;
+  techStack?: string[];
+}
+
+// Companies / clients worked with, shown as an experience timeline
+// (separate from the personal Projects grid). Newest first.
+export const experience: Experience[] = [
+  {
+    company: "Keble",
+    role: "Senior Frontend Engineer",
+    period: "Dec 2024 — Present",
+    location: "Remote",
+    current: true,
+    description:
+      "Building property search, wallet, and dashboard features — plus admin interfaces for transactions and listings — for a real estate investment platform, with a focus on reusable components and performance.",
+    url: "https://www.keble.co/",
+    techStack: ["NextJs", "Zustand", "TailwindCss"],
+  },
+  {
+    company: "Ignite.dev",
+    role: "Frontend Engineer",
+    period: "Sep 2023 — Dec 2024",
+    location: "Remote",
+    description:
+      "Engineered the product landing page and admin dashboard, integrated Strapi for content management, and set up end-to-end testing with Cypress.",
+    url: "https://www.ignite.dev",
+    techStack: ["NextJs", "Strapi", "Cypress", "TypeScript", "TailwindCss"],
+  },
+  {
+    company: "Tech Project on Budget (TPOB)",
+    role: "Frontend Engineer",
+    period: "Aug 2023 — Oct 2023",
+    location: "Lagos, NG",
+    description:
+      "Built the product landing page and admin dashboard, shipping reusable components and adopting high-performance libraries to speed up delivery.",
+    techStack: ["React", "TailwindCss"],
+  },
+  {
+    company: "Darsh",
+    role: "Lead Frontend Engineer",
+    period: "Mar 2022 — Jan 2023",
+    location: "Lagos, NG",
+    description:
+      "Led frontend development of the web app — delivering responsive, Figma-faithful UI and reusable templates, and driving code review, testing, and deployment.",
+    techStack: ["React", "TailwindCss"],
+  },
+];
+
 export const projects = [
   {
     name: "Vorge",
@@ -120,15 +180,6 @@ export const projects = [
     github: undefined,
     desc: "Vorge replaces the Word documents, copy-pasted spreadsheets and one-off PDFs your team uses today with a structured, multi-user platform — built for refineries, mines, ports, and other critical infrastructure operators.",
     techStack: ["NextJs", "TailwindCss", "Framer Motion", "Gsap"],
-  },
-  {
-    name: "Keble",
-    // TODO: add a real Keble screenshot to public/projects/ (was incorrectly using escaladeapartment.png)
-    img: undefined,
-    url: "https://www.keble.co/",
-    github: undefined,
-    desc: "Keble is a real estate investment platform focused on making full home and land ownership accessible to Africans across the globe.",
-    techStack: ["NextJs", "TailwindCss", "Framer Motion"],
   },
   {
     name: "Escalade Apartment",
