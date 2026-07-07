@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 import Layout from "../Layouts/Layout.astro";
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Tools from "../components/Tools.astro";
@@ -10,8 +10,11 @@ import Projects from "../components/Projects.astro";
 import Playground from "../components/Playground.astro";
 ---
 
-<Layout title="Chinedum">
-  <Navbar client:load />
+<Layout
+  title="Chinedum U. — Fullstack Software Engineer"
+  description="Chinedum U. is a Fullstack Software Engineer specializing in high-performance frontend experiences with React, Next.js, Vue, and Astro. See projects, tools, and writing."
+>
+  <Navbar />
   <div class="flex justify-center">
     <Hero />
   </div>

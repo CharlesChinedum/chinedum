@@ -1,6 +1,6 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import "../styles/blog.module.css";
+import "../styles/global.css";
 
 import BlogNavbar from "../components/BlogNavbar.astro";
 import PageLayout from "../components/Layouts/PageLayout.astro";
@@ -10,7 +10,10 @@ const posts = (await Astro.glob("../posts/*.md")).filter(
 );
 ---
 
-<Layout title="Blog">
+<Layout
+  title="Blog — Chinedum U."
+  description="Thoughts, ideas, and experiences from Chinedum U. on software engineering, learning new technologies, and building software."
+>
   <PageLayout>
     <section>
       <BlogNavbar />

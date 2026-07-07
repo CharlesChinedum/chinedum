@@ -7,7 +7,14 @@ export interface Props {
 const { title, icon } = Astro.props as Props;
 ---
 
-<div class="flex align-middle justify-start py-4 grayscale hover:grayscale-0">
-  <img src={`https://cdn.simpleicons.org/${icon}`} alt="" class="w-5" />
+<div
+  class="flex items-center justify-start py-2 grayscale hover:grayscale-0 transition duration-300"
+>
+  <img
+    src={`https://cdn.simpleicons.org/${icon}`}
+    alt={`${title} logo`}
+    loading="lazy"
+    class="w-5"
+  />
   <p class="text-gray-400 px-2">{title}</p>
 </div>

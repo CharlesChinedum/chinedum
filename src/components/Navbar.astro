@@ -1,0 +1,98 @@
+---
+import { Icon } from "astro-icon/components";
+import { navLinks } from "../data";
+---
+
+<nav
+  class="w-full flex py-6 justify-center items-center navbar z-10 mb-5 sm:mb-0 px-5 xl:px-10 2xl:px-20"
+>
+  <div class="w-full flex justify-between items-center max-w-[760px]">
+    <a href="/">
+      <p class="text-2xl text-gray-200 font-bold font-mono">Chinedum.</p>
+    </a>
+
+    <!-- desktop -->
+    <div>
+      <ul
+        class="list-none sm:flex hidden justify-center gap-2 items-center flex-1"
+      >
+        {
+          navLinks.map((nav, index) => (
+            <li
+              class={`text-gray-300 text-sm font-[600] font-mono hover:font-[700] hover:text-[#1f75fe] leading-[22px] hover:cursor-pointer z-10 poppins ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-3"
+              }`}
+            >
+              <a href={`${nav.url ? nav.url : `#${nav.id}`}`}>{nav.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- mobile -->
+    <div class="sm:hidden flex flex-1 justify-end items-center z-20">
+      <button
+        id="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="z-20 flex items-center"
+      >
+        <span id="nav-icon-menu">
+          <Icon name="mdi:menu" size="20" class="text-white" />
+        </span>
+        <span id="nav-icon-close" class="hidden">
+          <Icon name="mdi:close" size="20" class="text-white" />
+        </span>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="hidden p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar"
+      >
+        <ul class="list-none flex flex-col justify-end items-center flex-1">
+          {
+            navLinks.map((nav, index) => (
+              <li
+                class={`font-mono font-normal cursor-pointer text-[16px] hover:font-[700] hover:text-[#1f75fe] z-10 ${
+                  index === navLinks.length - 1 ? "mb-0" : "mb-4"
+                } text-white`}
+              >
+                <a
+                  href={`${nav.url ? nav.url : `#${nav.id}`}`}
+                  data-nav-link
+                >
+                  {nav.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const iconMenu = document.getElementById("nav-icon-menu");
+  const iconClose = document.getElementById("nav-icon-close");
+
+  function setOpen(open: boolean) {
+    menu?.classList.toggle("hidden", !open);
+    iconMenu?.classList.toggle("hidden", open);
+    iconClose?.classList.toggle("hidden", !open);
+    toggle?.setAttribute("aria-expanded", String(open));
+  }
+
+  toggle?.addEventListener("click", () => {
+    setOpen(menu?.classList.contains("hidden") ?? false);
+  });
+
+  document
+    .querySelectorAll("[data-nav-link]")
+    .forEach((link) => link.addEventListener("click", () => setOpen(false)));
+</script>

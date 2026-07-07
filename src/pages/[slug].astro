@@ -23,7 +23,10 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout
+  title={`${frontmatter.title} — Chinedum U.`}
+  description={frontmatter.description}
+>
   <PageLayout>
     <section>
       <BlogNavbar />
