@@ -54,6 +54,7 @@ const personSchema = {
     <title>{title}</title>
 
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(personSchema)}
     />
@@ -63,7 +64,9 @@ const personSchema = {
     <Footer />
 
     <!-- 100% privacy-first analytics -->
-    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"
-    ></script>
+    <script
+      is:inline
+      async
+      src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
 </html>
