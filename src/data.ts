@@ -170,7 +170,8 @@ export const futureTools = [
 export const projects = [
   {
     name: "Vorge",
-    img: "whipcare.png",
+    // TODO: add a real Vorge screenshot to public/projects/ (was incorrectly using whipcare.png)
+    img: undefined,
     url: "https://www.vorge.io/",
     github: undefined,
     desc: "Vorge replaces the Word documents, copy-pasted spreadsheets and one-off PDFs your team uses today with a structured, multi-user platform — built for refineries, mines, ports, and other critical infrastructure operators.",
@@ -178,7 +179,8 @@ export const projects = [
   },
   {
     name: "Keble",
-    img: "escaladeapartment.png",
+    // TODO: add a real Keble screenshot to public/projects/ (was incorrectly using escaladeapartment.png)
+    img: undefined,
     url: "https://www.keble.co/",
     github: undefined,
     desc: "Keble is a real estate investment platform focused on making full home and land ownership accessible to Africans across the globe.",

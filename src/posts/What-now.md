@@ -1,6 +1,6 @@
 ---
 title: What now?
-slug: what now
+slug: what-now
 date: 29 June 2023
 description: Join me on a candid and introspective exploration as I share my personal experiences and growth as a Software Engineer. In this captivating blog post, I open up about the challenges I've faced, including imposter syndrome and inconsistency, and my quest to overcome them.
 keywords: Imposter syndrome, Software Engineer, Journey, Things I've learned, Inconsistency, Writing, Blogging, Project, Language, Framework, Useful, Enjoy, Thanks, See you soon

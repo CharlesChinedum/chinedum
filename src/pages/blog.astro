@@ -5,7 +5,9 @@ import "../styles/blog.module.css";
 import BlogNavbar from "../components/BlogNavbar.astro";
 import PageLayout from "../components/Layouts/PageLayout.astro";
 
-const posts = await Astro.glob("../posts/*.md");
+const posts = (await Astro.glob("../posts/*.md")).filter(
+  (post) => !post.frontmatter.draft
+);
 ---
 
 <Layout title="Blog">

@@ -6,7 +6,9 @@ import PageLayout from "../components/Layouts/PageLayout.astro";
 import { CLIENT_ROUTES } from "../data";
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob("../posts/*.md");
+  const posts = (await Astro.glob("../posts/*.md")).filter(
+    (post) => !post.frontmatter.draft
+  );
 
   return posts.map((post) => ({
     params: {
