@@ -4,14 +4,11 @@ import "../styles/global.css";
 
 import BlogNavbar from "../components/BlogNavbar.astro";
 import PageLayout from "../components/Layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
 
-const posts = (await Astro.glob("../posts/*.md"))
-  .filter((post) => !post.frontmatter.draft)
-  .sort(
-    (a, b) =>
-      (Date.parse(b.frontmatter.date) || 0) -
-      (Date.parse(a.frontmatter.date) || 0)
-  );
+const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
+  (a, b) => (Date.parse(b.data.date) || 0) - (Date.parse(a.data.date) || 0)
+);
 
 function parseDate(raw?: string) {
   const d = raw ? new Date(raw) : null;
@@ -50,7 +47,7 @@ function parseDate(raw?: string) {
 
           {
             posts.map((post, index) => {
-              const { day, month, year } = parseDate(post?.frontmatter?.date);
+              const { day, month, year } = parseDate(post.data.date);
               return (
               <div class="flex gap-5">
                 <div class="flex w-[10%] flex-col justify-center items-center">
@@ -62,12 +59,12 @@ function parseDate(raw?: string) {
                 </div>
                 <div class="w-[90%] border-l-2 px-5 relative border-[#1f75fe]">
                   <div class="absolute top-0 -left-[7px] w-3 aspect-square bg-[#1f75fe] rounded-full" />
-                  <a href={`/${post.frontmatter.slug}`}>
+                  <a href={`/${post.data.slug}`}>
                     <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">
-                      {post.frontmatter.title}
+                      {post.data.title}
                     </h2>
                   </a>
-                  <p class="my-3">{post.frontmatter.description}</p>
+                  <p class="my-3">{post.data.description}</p>
 
                   {index === posts?.length - 1 && (
                     <div class="absolute bottom-0 -left-1.5 w-3 aspect-square bg-[#1f75fe] rounded-full" />
