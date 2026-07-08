@@ -121,3 +121,50 @@ Lucida Grande */
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(123px);
 }
+
+/* ---- Glassmorphism ---- */
+
+/* Frosted surface for floating panels (mobile menu, pills). */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* Sticky top bar — tuned so content blurs as it scrolls underneath. */
+.glass-nav {
+  background-color: rgba(18, 18, 18, 0.6);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Soft brand glow that sits behind the hero so glass has something
+   to refract. Purely decorative; pointer-events disabled at usage. */
+.glow-hero {
+  width: min(680px, 90vw);
+  height: 680px;
+  margin-top: -220px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(31, 117, 254, 0.18) 0%,
+    rgba(31, 117, 254, 0) 70%
+  );
+  filter: blur(60px);
+}
+
+/* Respect users who prefer reduced motion / effects sensitivity:
+   backdrop blur can be heavy on low-end GPUs. */
+@media (prefers-reduced-motion: reduce) {
+  .glass,
+  .glass-nav {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .glass-nav {
+    background-color: rgba(18, 18, 18, 0.92);
+  }
+}
