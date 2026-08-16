@@ -1,5 +1,5 @@
 ---
-import { playground, CLIENT_ROUTES } from "../data";
+import { playground } from "../data";
 import Card from "./Card.astro";
 import PageLayout from "./Layouts/PageLayout.astro";
 ---
@@ -27,7 +27,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
       </div>
 
       <div class="w-full flex justify-center py-7">
-        <div class="w-full flex flex-wrap gap-7 justify-start">
+        <div class="w-full flex flex-wrap gap-5 justify-start">
           {
             playground.map((item) => (
               <Card
@@ -36,6 +36,7 @@ import PageLayout from "./Layouts/PageLayout.astro";
                 img={`../projects/${item.img}`}
                 url={item.url}
                 src={item.github}
+                stack={item.techStack}
               />
             ))
           }
