@@ -74,6 +74,10 @@ const svg = `
   <!-- url -->
   <text x="140" y="490" font-family="${MONO}" font-size="22" fill="#6b7280">www.trulynedum.dev</text>
 
+  <!-- call-to-action button -->
+  <rect x="855" y="452" width="235" height="52" rx="12" fill="#1f75fe"/>
+  <text x="972" y="486" text-anchor="middle" font-family="${MONO}" font-size="21" fill="#ffffff">View portfolio →</text>
+
   <!-- accent underline -->
   <rect x="420" y="368" width="120" height="4" rx="2" fill="#1f75fe" fill-opacity="0.85"/>
 </svg>`;
