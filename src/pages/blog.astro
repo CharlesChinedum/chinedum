@@ -7,7 +7,7 @@ import PageLayout from "../components/Layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("posts", ({ data }) => !data.draft)).sort(
-  (a, b) => (Date.parse(b.data.date) || 0) - (Date.parse(a.data.date) || 0)
+  (a, b) => (Date.parse(b.data.date) || 0) - (Date.parse(a.data.date) || 0),
 );
 
 function parseDate(raw?: string) {
@@ -26,8 +26,8 @@ function parseDate(raw?: string) {
 ---
 
 <Layout
-  title="Blog — Chinedum U."
-  description="Thoughts, ideas, and experiences from Chinedum U. on software engineering, learning new technologies, and building software."
+  title="Blog — Charles Ugbor"
+  description="Thoughts, ideas, and experiences from Charles Ugbor on software engineering, learning new technologies, and building software."
 >
   <PageLayout>
     <section>
@@ -49,28 +49,28 @@ function parseDate(raw?: string) {
             posts.map((post, index) => {
               const { day, month, year } = parseDate(post.data.date);
               return (
-              <div class="flex gap-5">
-                <div class="flex w-[10%] flex-col justify-center items-center">
-                  <h2 class="text-center text-gray-200 text-2xl md:text-3xl font-[600]">
-                    {day}
-                  </h2>
-                  <p>{month}</p>
-                  <p class="text-sm">{year}</p>
-                </div>
-                <div class="w-[90%] border-l-2 px-5 relative border-[#1f75fe]">
-                  <div class="absolute top-0 -left-[7px] w-3 aspect-square bg-[#1f75fe] rounded-full" />
-                  <a href={`/${post.data.slug}`}>
-                    <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">
-                      {post.data.title}
+                <div class="flex gap-5">
+                  <div class="flex w-[10%] flex-col justify-center items-center">
+                    <h2 class="text-center text-gray-200 text-2xl md:text-3xl font-[600]">
+                      {day}
                     </h2>
-                  </a>
-                  <p class="my-3">{post.data.description}</p>
+                    <p>{month}</p>
+                    <p class="text-sm">{year}</p>
+                  </div>
+                  <div class="w-[90%] border-l-2 px-5 relative border-[#1f75fe]">
+                    <div class="absolute top-0 -left-[7px] w-3 aspect-square bg-[#1f75fe] rounded-full" />
+                    <a href={`/${post.data.slug}`}>
+                      <h2 class="text-gray-200 text-2xl md:text-3xl font-[600]">
+                        {post.data.title}
+                      </h2>
+                    </a>
+                    <p class="my-3">{post.data.description}</p>
 
-                  {index === posts?.length - 1 && (
-                    <div class="absolute bottom-0 -left-1.5 w-3 aspect-square bg-[#1f75fe] rounded-full" />
-                  )}
+                    {index === posts?.length - 1 && (
+                      <div class="absolute bottom-0 -left-1.5 w-3 aspect-square bg-[#1f75fe] rounded-full" />
+                    )}
+                  </div>
                 </div>
-              </div>
               );
             })
           }
