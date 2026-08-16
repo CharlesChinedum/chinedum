@@ -27,6 +27,9 @@ const frontmatter = post.data;
 <Layout
   title={`${frontmatter.title} — Chinedum U.`}
   description={frontmatter.description}
+  type="article"
+  publishedDate={frontmatter.date}
+  keywords={frontmatter.keywords}
 >
   <PageLayout>
     <section>

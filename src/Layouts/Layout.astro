@@ -4,27 +4,102 @@ import Footer from "../components/Footer.astro";
 export interface Props {
   title: string;
   description?: string;
+  type?: "website" | "article";
+  publishedDate?: string;
+  keywords?: string;
 }
 
 const DEFAULT_DESCRIPTION =
-  "Chinedum U. is a Fullstack Software Engineer specializing in high-performance frontend experiences with React, Next.js, Vue, and Astro.";
+  "Charles Ugbor is a Fullstack Software Engineer specializing in high-performance frontend experiences with React, Next.js, Vue, and Astro.";
 
-const { title, description = DEFAULT_DESCRIPTION } = Astro.props as Props;
+const {
+  title,
+  description = DEFAULT_DESCRIPTION,
+  type = "website",
+  publishedDate,
+  keywords,
+} = Astro.props as Props;
 
+const siteURL = Astro.site?.href ?? "https://www.trulynedum.dev/";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("/favicon.png", Astro.site);
 
+const parsedPublishedDate = publishedDate ? new Date(publishedDate) : null;
+const publishedISO =
+  parsedPublishedDate && !isNaN(parsedPublishedDate.getTime())
+    ? parsedPublishedDate.toISOString()
+    : undefined;
+
 const personSchema = {
-  "@context": "https://schema.org",
   "@type": "Person",
-  name: "Chinedum U.",
+  "@id": `${siteURL}#person`,
+  name: "Charles Ugbor",
   alternateName: "Charles Chinedum Ugbor",
-  url: Astro.site?.href,
+  url: siteURL,
+  image: ogImage.href,
   jobTitle: "Fullstack Software Engineer",
+  description: DEFAULT_DESCRIPTION,
+  email: "mailto:charleschinedum2@gmail.com",
+  knowsAbout: [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue",
+    "Astro",
+    "Node.js",
+    "Frontend Engineering",
+    "Fullstack Development",
+    "Web Development",
+    "Software Engineering",
+    "Smart Contract Engineering",
+    "Solidity",
+    "Rust",
+    "Foundry",
+  ],
   sameAs: [
     "https://github.com/CharlesChinedum",
     "https://twitter.com/trulynedum",
     "https://www.linkedin.com/in/charles-ugbor-40b1121a7",
+  ],
+};
+
+const websiteSchema = {
+  "@type": "WebSite",
+  "@id": `${siteURL}#website`,
+  url: siteURL,
+  name: "Charles Ugbor — Fullstack Software Engineer",
+  description: DEFAULT_DESCRIPTION,
+  publisher: { "@id": `${siteURL}#person` },
+};
+
+const articleSchema =
+  type === "article"
+    ? {
+        "@type": "BlogPosting",
+        "@id": `${canonicalURL.href}#article`,
+        mainEntityOfPage: canonicalURL.href,
+        headline: title,
+        description,
+        url: canonicalURL.href,
+        image: ogImage.href,
+        ...(publishedISO && {
+          datePublished: publishedISO,
+          dateModified: publishedISO,
+        }),
+        ...(keywords && { keywords }),
+        author: { "@id": `${siteURL}#person` },
+        publisher: { "@id": `${siteURL}#person` },
+        inLanguage: "en",
+      }
+    : null;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    personSchema,
+    websiteSchema,
+    ...(articleSchema ? [articleSchema] : []),
   ],
 };
 ---
@@ -37,16 +112,34 @@ const personSchema = {
     <meta name="generator" content={Astro.generator} />
 
     <meta name="description" content={description} />
+    <meta name="author" content="Chinedum U." />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#121212" />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
+    <meta property="og:site_name" content="Chinedum U." />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    {
+      type === "article" && publishedISO && (
+        <meta property="article:published_time" content={publishedISO} />
+      )
+    }
+    {
+      type === "article" && (
+        <meta property="article:author" content="Chinedum U." />
+      )
+    }
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@trulynedum" />
+    <meta name="twitter:creator" content="@trulynedum" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
@@ -56,7 +149,7 @@ const personSchema = {
     <script
       is:inline
       type="application/ld+json"
-      set:html={JSON.stringify(personSchema)}
+      set:html={JSON.stringify(structuredData)}
     />
   </head>
   <body>
